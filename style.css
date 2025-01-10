@@ -1,63 +1,84 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background color: #fff;
+    border: 10px solid #fff;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    border: 10px solid #fff;
+    box-sizing: border-box;
+    width: 100%;
+    height: 90vh;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 0;
 }
 
 .page {
-    height: 100vh; 
+    height: 75vh;
     display: flex;
-    align-items: center; 
-    transition:0.5s ease; 
-    position: relative; 
-    overflow: hidden; 
-    background-color: #f8f8f8;
+    align-items: center;
+    transition: 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    background-color: #07102e;
 }
-
 
 #page1 .image-container {
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; 
-    height: 100%; 
-    background-image: url('https://img.freepik.com/free-photo/top-view-desk-concept-with-laptop_23-2148236828.jpg?t=st=1733505203~exp=1733508803~hmac=27ff66f797b24bf799dcb9a27e04ce03f79fbaf3a686be5b3f6ab97cb3b3ac55&w=2000'); 
-    background-size: cover; 
-    background-position: center; 
-    opacity: 0.4; 
-    z-index: 1; 
+    width: 100%;
+    height: 100%;
+    background-color: #1a2a4e;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: 1;
 }
-#page1head{margin-bottom: 160px;
-    margin-left: 130px;}
+
+#page1head {
+    margin-bottom: 110px;
+    margin-left: 70px;
+}
 
 #content {
     display: flex;
     flex-direction: row;
     align-items: center;
-    z-index: 2; 
-    width: 100%; 
-    padding-left: 30%; 
+    z-index: 2;
+    width: 100%;
+    padding-left: 20%;
+    margin-top: 70px;
 }
 
 #textdiv {
-    text-align: center; 
-    z-index: 2; 
+    text-align: center;
+    z-index: 2;
     max-width: 650px;
 }
 
 #headingdiv h1 {
-    font-size: 2.5em; 
-    margin: 0; 
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #413f3f;
+    font-size: 2.5em;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #F4F6F6;
 }
 
 #paradiv p {
-    font-size: 1.2em;
-    line-height: 1.6; 
-    margin: 20px 0; 
-    padding: 0 10px; 
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 20px 0;
+    padding: 0 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #413f3f;
+    color: #F4F6F6;
 }
 
 #paradiv {
@@ -66,138 +87,168 @@ body {
 }
 
 #imgdiv {
-    flex-shrink: 0; 
-    margin-left: 30px; 
+    flex-shrink: 0;
+    margin-left: 30px;
     height: auto;
 }
 
 #imgdiv img {
-    width: 230px; 
-    height: auto; 
-    max-height: 60vh; 
-    border: 2px solid #8ba0e1; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
-    transition: transform 0.3s; 
+    width: 230px;
+    height: auto;
+    max-height: 60vh;
+    border: 2px solid #8ba0e1;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
 }
 
 #imgdiv img:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
-#page2conatiner {
-    margin: 20px; 
-    text-align:justify;
-    margin-bottom: 140px; 
+#page2container {
+    margin: 20px;
+    text-align: justify;
+    margin-bottom: 50px;
 }
 
 #page2head {
-    font-size: 65px; 
+    font-size: 65px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Sans Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #413f3f;
+    color: rgb(11, 88, 126);
     margin-bottom: 40px;
-    margin-left: 190px; 
+    margin-left: 190px;
 }
 
 #p2para {
-    font-size: 20px; 
+    font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Sans Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #413f3f;
+    color: #000000;
     line-height: 1.6;
-    margin-left: 40px; 
+    margin-left: 40px;
 }
 
 #page2 {
-    position: relative; 
-    background-image: url('https://img.freepik.com/free-photo/3d-background-with-white-cubes_23-2150472987.jpg'); /* Replace with your image URL */
-    background-size: cover; 
-    background-position: center; 
-    height: 100vh; 
+    height: auto; 
+    min-height: 500px; 
+    padding: 50px 0; 
+    background-color: #f7f7f7;
 }
 
-#page2::before {
-    content: ""; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(255, 255, 255, 0.5); 
-    z-index: 1; 
+#page2container {
+    position: relative;
+    z-index: 2;
+    margin: 20px;
 }
 
-#page2conatiner {
-    position: relative; 
-    z-index: 2; 
-    margin: 20px; 
-}
 
-.projects-section {
-    max-width: 1200px; 
-    margin: 50px auto;
-    padding: 20px;
+.product-container {
     display: flex;
-    flex-direction: column; 
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    padding-left: 50px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.project-card {
-    display: flex; 
-    align-items: center; 
-    margin: 20px 0; 
-    padding: 20px;
-    background: linear-gradient(135deg, #f5f7fa, #e4e9ef); 
-    border-radius: 15px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    overflow: hidden; 
+#page3 {
+    height: 800px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    background-color: #1a2a4e;
 }
 
-.project-image {
-    width: 150px; 
-    height: 150px; 
-    border-radius: 10px; 
-    overflow: hidden; 
-    display: flex; 
-    align-items: center; /* Center image vertically */
-    justify-content: center; /* Center image horizontally */
-    background: #d9d9d9; /* Placeholder background */
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+    margin-left: 70px;
+    max-width: 350px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background: transparent;
+    border: #000000 solid 4px;
 }
 
-.project-image img {
-    width: 100%; /* Make image responsive */
-    height: auto; /* Maintain aspect ratio */
+.product img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
-.project-content {
-    margin-left: 20px; /* Space between image and text */
-    flex: 1; /* Allow content to take remaining space */
+.product:hover img {
+    transform: scale(1.1);
 }
 
-.project-title {
-    font-size: 1.8rem; /* Title font size */
-    color: #333; /* Title color */
-    margin-bottom: 10px; /* Space below title */
+.product:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
-.project-description {
-    font-size: 1.1rem; /* Description font size */
-    color: #555; /* Description color */
-    margin-bottom: 15px; /* Space below description */
-    line-height: 1.5; /* Line height for readability */
+.cost {
+    margin-top: 10px;
+    font-size: 1.2em;
+    text-align: center;
 }
 
-.view-project {
-    display: inline-block; /* Make it a block element */
-    padding: 10px 15px; /* Padding for button */
-    color: #007bff; /* Button text color */
-    background-color: #fff; /* Button background color */
-    border: 2px solid #007bff; /* Button border */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    font-size: 1rem; /* Font size */
-    transition: all 0.3s ease; /* Smooth transition */
+#p3head { 
+    font-size: 3.5em; 
+    margin-top: 120px;
+    text-align: center;
+    margin-left: 10px;
+    color: rgb(231, 229, 226); 
 }
 
-.view-project:hover {
-    color: #fff; /* Change text color on hover */
-    background-color: #007bff; /* Change background color on hover */
+.Product-text {
+    color: rgb(255, 252, 252);
+    font-size: 25px;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #07102e;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #F4F6F6;
+    font-size: 1.2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+nav ul li a.active {
+    color: #8ba0e1;
+    border-bottom: 2px solid #8ba0e1;
 }
