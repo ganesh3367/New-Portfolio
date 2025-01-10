@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background color: #fff;
+    background color: #ffff;
     border: 10px solid #fff;
     box-sizing: border-box;
 }
@@ -152,7 +152,7 @@ html {
 }
 
 #page3 {
-    height: 800px;
+    height: auto;
     display: flex;
     align-items: center;
     transition: 0.5s ease;
@@ -172,7 +172,7 @@ html {
     border-radius: 8px;
     overflow: hidden;
     background: transparent;
-    border: #000000 solid 4px;
+    border: #ffffff solid 4px;
 }
 
 .product img {
@@ -252,3 +252,116 @@ nav ul li a.active {
     color: #8ba0e1;
     border-bottom: 2px solid #8ba0e1;
 }
+
+#page4 {
+    height: auto;
+    min-height: 100px;
+    padding: 50px 0;
+    background-color: #f7f7f7;
+    color: #F4F6F6;
+    text-align: center;
+}
+
+#contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#contact-head {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #8ba0e1;
+}
+
+#contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #106363;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: 2px solid #8ba0e1;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background-color: #8ba0e1;
+    color: #07102e;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+#page4 {
+    height: auto;
+    min-height: 00px;
+    padding: 80px 0;
+    background-color:#07102e;
+    color: #F4F6F6;
+    text-align: center;
+}
+
+#contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#contact-head {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #1a2a4e;
+    border: 2px solid #8ba0e1;
+    border-radius: 0px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 0px;
+    background-color: #F4F6F6;
+}
+
+#contact-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #8ba0e1;
+    color: #07102e;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+#contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    background-color: #f7f7f7;
+} 
