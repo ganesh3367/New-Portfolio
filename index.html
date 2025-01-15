@@ -15,22 +15,23 @@
             <li><a href="#page4">Contact</a></li>
         </ul>
     </nav>
-    <section class="page" id="page1">
-        <div class="image-container"></div>
-        <div id="content">
-            <div id="textdiv">
-                <div id="headingdiv">
-                    <h1>
-                        <div class="loader"></div>Welcome to Ganesh's Portfolio
-                    </h1>
-                </div>
-                <div id="paradiv"><p>Hello Everyone! My name is Ganesh, and I'm a first-year engineering student at Newton School of Technology, Pune, specializing in AI and ML. I'm passionate about coding, problem-solving, and exploring new technologies. This portfolio reflects my journey, projects, and aspirations. Feel free to explore my work!</p></div>
+
+<section class="page" id="page1">
+    <div class="image-container"></div>
+    <div id="content">
+        <div id="textdiv">
+            <div id="headingdiv">
+                <h1 class="fade-in-up">
+                    <div class="loader"></div>Welcome to Ganesh's Portfolio
+                </h1>
             </div>
-            <div id="imgdiv">
-                <img src="Snapchat-1270546382.JPG" alt="Portfolio Image" id="image1">
-            </div>
+            <div id="paradiv"><p class="fade-in-up">Hello Everyone! My name is Ganesh, and I'm a first-year engineering student at Newton School of Technology, Pune, specializing in AI and ML. I'm passionate about coding, problem-solving, and exploring new technologies. This portfolio reflects my journey, projects, and aspirations. Feel free to explore my work!</p></div>
         </div>
-    </section>
+        <div id="imgdiv">
+            <img src="Snapchat-1270546382.JPG" alt="Portfolio Image" id="image1" class="fade-in-up">
+        </div>
+    </div>
+</section>
 
     <section class="page" id="page2">
  
@@ -127,7 +128,26 @@
             </div>
         </section>
 
-    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.page h1, .page p, .page img');
+
+            function checkPosition() {
+                const windowHeight = window.innerHeight;
+                elements.forEach(element => {
+                    const positionFromTop = element.getBoundingClientRect().top;
+                    if (positionFromTop - windowHeight <= 0) {
+                        element.classList.add('fade-in-up');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', checkPosition);
+            checkPosition();
+        });
+    </script>
+</body>
 
 </body>
 </html>
