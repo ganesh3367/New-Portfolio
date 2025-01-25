@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ganesh's Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
   <nav>
@@ -12,6 +14,7 @@
       <li><a href="#page1">Home</a></li>
       <li><a href="#page2">About</a></li>
       <li><a href="#page3">Projects</a></li>
+      <li><a href="#page4">Skills</a></li>
     </ul>
   </nav>
 
@@ -21,18 +24,18 @@
       <div id="textdiv">
         <div id="headingdiv">
           <h1 class="fade-in-up">
-            <div class="loader"></div>Welcome to Ganesh's Portfolio
+            <div class="loader"></div>Welcome to My Portfolio.
           </h1>
         </div>
         <div id="paradiv"><p class="fade-in-up">Hello Everyone! My name is Ganesh, and I'm a first-year engineering student at Newton School of Technology, Pune, specializing in AI and ML. I'm passionate about coding, problem-solving, and exploring new technologies. This portfolio reflects my journey, projects, and aspirations. Feel free to explore my work!</p></div>
       </div>
       <div id="imgdiv">
-        <img src="Snapchat-1270546382.JPG" alt="Portfolio Image" id="image1" class="fade-in-up">
+        <img src="IMG_0218.JPG" alt="Portfolio Image" id="image1" class="fade-in-up">
       </div>
     </div>
   </section>
 
-  <section class="page page-2" id="page2">
+  <section class="pagepage-2" id="page2">
     <div id="page2container">
       <h1 id="page2head">About Me</h1> 
       <p id="p2para">Hello! I'm a first-year engineering student at Newton School of Technology in Pune, specializing in AI and ML. I have a deep passion for technology and problem-solving, which has led me to explore various areas like coding, data structures, algorithms, and Linux-based projects.
@@ -70,15 +73,49 @@
         <a href="google.com">
           <img src="https://images.alphacoders.com/133/thumb-1920-1330845.png" alt="Product 2" class="scroll-effect"></a> 
         <p class="Product-text">Portfolio</p>
+
       </div>
 
+
+    </div>
+    <button class="show-more" onclick="location.href='#page3'">Show More</button>
+  </div>
+  
+  </section>
+  <section id="page4">
+    <h1 > Programing Skills</h1>
+    <div class="programming-languages-container">
+      <div class="programming-language-row">
+        <div class="programming-language">
+          <img src="html.png" alt="HTML">
+          <span>HTML</span>
+        </div>
+        <div class="programming-language">
+          <img src="css-3.png" alt="CSS">
+          <span>CSS</span>
+        </div>
+        <div class="programming-language">
+          <img src="js.png" alt="JavaScript">
+          <span>JavaScript</span>
+        </div>
+      </div>
+      <div class="programming-language-row">
+        <div class="programming-language">
+          <img src="python.png" alt="Python">
+          <span>Python</span>
+        </div>
+        <div class="programming-language">
+          <img src="atom.png" alt="React">
+          <span>React</span>
+        </div>
+        <div class="programming-language">
+          <img src="java-logo.png" alt="Java">
+          <span>Java</span>
+        </div>
+      </div>
     </div>
   </section>
-  <section id="page4" class="page-4">
-    <h2 id="page4h2">My Skills ⚒️ </h2>
-  </section>
-
-  <script src="style.js">
+  <script src="script.js">
   </script>
 </body>
 </html>
