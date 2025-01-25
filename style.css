@@ -28,7 +28,7 @@ body {
     transition: 0.5s ease;
     position: relative;
     overflow: hidden;
-    background-color: #07102e;
+    background: linear-gradient(to bottom, #07102e, #1a2a4e);
   }
   
   #page1 .image-container {
@@ -83,8 +83,7 @@ body {
   }
   
   #paradiv {
-    align-items: center;
-    height: min-content;
+    height: max-content;
   }
   
   #imgdiv {
@@ -125,9 +124,10 @@ body {
   #page2head {
     font-size: 65px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Sans Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(11, 88, 126);
+    color: #1a2a4e;
     margin-bottom: 40px;
-    margin-left: 190px;
+    margin-left: 170px;
+    font-weight: 700;
   }
   
   #p2para {
@@ -157,7 +157,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #1a2a4e;
+    background: linear-gradient(to bottom, #132551, #00030d);
     padding: 50px 0;
   }
   
@@ -209,33 +209,101 @@ body {
     text-align: center;
     padding: 15px 0;
     margin: 0;
+
   }
+
+  .white-strip {
+    height: 20px;
+    background-color: #ffffff;
+    margin-right: 30px;
+    width: 90%;
+  }
+  .show-more {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .show-more:hover {
+    background-color: #3e8e41;
+  }
+
    /* Page 4 CSS */
-  #page4 {
-    height: 450px;
-    padding: 80px 0;
-    background-color: #f7f7f7;
-    text-align: center;
+   #page4 {
+    height: 510px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-  }
-  #page4h2 {
+    background-color: #f7f7f7;
+    padding: 50px 0;
+    transition: all 0.3s ease;}
+
+
+
+
+  #page4 h1 {
     font-size: 60px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Sans Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #1a2a4e;
-    transition: color 1s ease;
-    margin-top: -20px;
-    font-weight:1200;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #07102e;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    transition: all 0.3s ease;
+    
+  }
+  #page4 h1:hover {
+    transform: scale(1.05);
   }
 
 
 
+  .programming-language-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .programming-languages-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+
+  }
+  
+  .programming-language {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    margin: 0 40px;
+    
+  }
+  
+  .programming-language img {
+    width: 108px;
+    height: 108px;
+    margin-bottom: 10px;
+    transition: transform 0.5s ease;
+  }
+  
+  .programming-language span {
+    font-size: 16px;
+    font-weight: bold;
+  }
 
 
-
-
-
-
-
+  
+  .programming-language img:hover {
+    transform: rotate(360deg);
+  }
   /* Nav Css */
   
   nav {
