@@ -42,7 +42,6 @@ gsap.from("nav ul li", {
     },
   });
   
-  // Animate image and text in page 1
   gsap.to("#page1 .image-container", {
     y: -document.querySelector("#page1 .image-container").offsetHeight,
     duration: 2,
