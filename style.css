@@ -28,7 +28,7 @@ body {
     transition: 0.5s ease;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to bottom, #07102e, #1a2a4e);
+    background: linear-gradient(to bottom, #060f2b, #202d4b);
   }
   
   #page1 .image-container {
@@ -37,7 +37,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #1a2a4e;
     background-size: cover;
     background-position: center;
     opacity: 0.4;
@@ -96,16 +95,16 @@ body {
     width: 230px;
     height: auto;
     max-height: 60vh;
-    border: 2px solid #8ba0e1;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s;
   }
   
   #imgdiv img:hover {
     transform: scale(1.05);
   }
-  
+  /* page 2 css */
+
+
   #page2container {
     margin: 20px;
     text-align: justify;
@@ -174,6 +173,8 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     padding: 0 20px;
+    margin-left: 190px;
+ 
   }
   
   .product {
@@ -488,3 +489,45 @@ body {
                 -70px 90px 0 rgba(0, 0, 0, 0);
     }
   }
+
+/* Add this to your existing CSS */
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .page {
+    height: 100vh;
+  }
+  .product-container {
+    flex-direction: column;
+  }
+  .product {
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Add animations to product images and text */
+.product img {
+  transition: transform 0.5s ease;
+}
+
+.product img:hover {
+  transform: scale(1.1);
+}
+
+.Product-text {
+  transition: transform 0.5s ease;
+}
+
+.Product-text:hover {
+  transform: scale(1.1);
+}
+
+/* Add animations to programming languages */
+.programming-language {
+  transition: transform 0.5s ease;
+}
+
+.programming-language:hover {
+  transform: scale(1.1);
+}
