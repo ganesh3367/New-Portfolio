@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -21,7 +22,7 @@ body {
     padding: 0;
   }
   
-  .page {
+  #page1 {
     height: 75vh;
     display: flex;
     align-items: center;
@@ -73,7 +74,7 @@ body {
   }
   
   #paradiv p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     line-height: 1.6;
     margin: 20px 0;
     padding: 0 10px;
@@ -103,6 +104,19 @@ body {
     transform: scale(1.05);
   }
   /* page 2 css */
+  .text > p {
+    background: linear-gradient(
+      to right,
+      rgb(20, 20, 10) 50%,
+      rgb(3, 201, 3) 50%
+    );
+    background-size: 200% 100%;
+    background-position-x: 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 20px;
+  }
 
 
   #page2container {
@@ -110,15 +124,7 @@ body {
     text-align: justify;
     margin-bottom: 50px;
   }
-  
-  #page2head, #p2para {
-    color: white;
-    transition: color 1s ease;
-  }
-  
-  .scrolled #page2head, .scrolled #p2para {
-    color: black;
-  }
+
   
   #page2head {
     font-size: 65px;
@@ -130,7 +136,7 @@ body {
   }
   
   #p2para {
-    font-size: 20px;
+    font-size: 23px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Sans Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #000000;
     line-height: 1.6;
@@ -141,7 +147,7 @@ body {
     height: auto;
     min-height: 500px;
     padding: 50px 0;
-    background-color: #f7f7f7;
+
   }
   
   #page2container {
@@ -531,3 +537,5 @@ body {
 .programming-language:hover {
   transform: scale(1.1);
 }
+
+
