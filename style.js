@@ -14,7 +14,7 @@ gsap.from("nav ul li", {
     },
   });
   
-  // Animate hero section
+
   gsap.from("#page1 .image-container", {
     y: 100,
     opacity: 0,
