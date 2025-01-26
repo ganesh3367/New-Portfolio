@@ -227,3 +227,30 @@ gsap.to("#page2", {
       scrub: 1
     }
   });
+  gsap.to("nav", {
+    duration: 1,
+    height: 120,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: "nav",
+      start: "top top",
+      end: "bottom top",
+      scrub: 1,
+      markers: false
+    }
+  });
+
+// Animate the contact section
+// Animate the contact section
+gsap.from("#contact", {
+    opacity: 0,
+    y: 100,
+    duration: 1.5,
+    scrollTrigger: {
+      trigger: "#contact",
+      start: "top 80%",
+      end: "bottom 20%",
+      scrub: 1,
+      markers: false
+    }
+  });
