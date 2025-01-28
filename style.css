@@ -184,29 +184,33 @@ body {
   }
   
   .product {
-    width: 300px;
+    width: 400px;
     background-color: #ffffff;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+    height: 500px;
+    transform: scale(1); /* Add this line to scale the image */
+    transition: transform 0.5s ease; /* Add this line to animate the scale */
   }
   
   .product:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1); /* Add this line to scale the image on hover */
   }
+  
   
   .product img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
     border-radius: 10px 10px 0 0;
     transition: transform 0.3s ease;
+    transition: filter 0.5s ease; /* Add this line to animate the filter */
   }
   
   .product:hover img {
-    transform: scale(1.05);
+    filter: grayscale(0); /* Add this line to remove the grayscale filter on hover */
   }
   
   .Product-text {
@@ -217,6 +221,16 @@ body {
     padding: 15px 0;
     margin: 0;
 
+  }
+  .product-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .product {
+    width: 45%;
+    margin: 10px;
   }
 
   .white-strip {
@@ -238,6 +252,7 @@ body {
   .show-more:hover {
     background-color: #3e8e41;
   }
+  
 
    /* Page 4 CSS */
    #page4 {
