@@ -1,7 +1,7 @@
 
 
 // Animate navigation menu
-gsap.from("nav ul li", { 
+gsap.from("nav ul li", {
   x: -100,
   opacity: 0,
   duration: 1,
