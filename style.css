@@ -192,12 +192,12 @@ html {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
   height: 500px;
-  transform: scale(1); /* Add this line to scale the image */
-  transition: transform 0.5s ease; /* Add this line to animate the scale */
+  transform: scale(1); 
+  transition: transform 0.5s ease; 
 }
 
 .product:hover {
-  transform: scale(1.1); /* Add this line to scale the image on hover */
+  transform: scale(1.1); 
 }
 
 
@@ -207,11 +207,11 @@ html {
   object-fit: contain;
   border-radius: 10px 10px 0 0;
   transition: transform 0.3s ease;
-  transition: filter 0.5s ease; /* Add this line to animate the filter */
+  transition: filter 0.5s ease; 
 }
 
 .product:hover img {
-  filter: grayscale(0); /* Add this line to remove the grayscale filter on hover */
+  filter: grayscale(0); 
 }
 
 .Product-text {
@@ -510,8 +510,6 @@ nav ul li a:hover {
 
 
 
-
-/* Add animations to product images and text */
 .product img {
 transition: transform 0.5s ease;
 }
@@ -528,7 +526,6 @@ transition: transform 0.5s ease;
 transform: scale(1.1);
 }
 
-/* Add animations to programming languages */
 .programming-language {
 transition: transform 0.5s ease;
 }
