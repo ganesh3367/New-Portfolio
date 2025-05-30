@@ -672,3 +672,6 @@ font-size: 36px;
 .social-links a:hover {
 color: #8ba0e1;
 }
+smooth-scroll {
+  scroll-behavior: smooth;
+}
