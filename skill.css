@@ -7,50 +7,98 @@ body {
     .container {
         max-width: 1100px;
         margin: 0 auto;
-        padding: 60px 20px;
+        padding: 30px 20px;
     }
-    h1 {
-        color: #000000;
-        text-align: center;
-        font-size: 36px;
-        margin-bottom: 20px;
+    /* Skills Title Row */
+    .skills-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 40px;
     }
-    .description {
-        text-align: center;
-        color: #060606;
-        font-size: 16px;
-        max-width: 700px;
-        margin: 0 auto 40px;
+    .skills-title h1 {
+        color: #ffffff;
+        font-size: 56px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 0;
     }
+
+    /* Skills Grid */
     .skills-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
     }
     .skill-card {
         background: #ffffff;
-        padding: 30px;
+        padding: 25px;
         border-radius: 12px;
         text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
     .skill-card:hover {
-        transform: translateY(-5px);
+        transform: translateY(-10px);
         box-shadow: 0 8px 20px rgba(244, 244, 244, 0.4);
     }
     .skill-card img {
-        width: relative;
-        height: 110px;
+        height: 80px;
         margin-bottom: 15px;
     }
     .skill-card h3 {
         margin-bottom: 10px;
-        font-size: 18px;
-        color: #ffffff;
+        font-size: 20px;
+        color: #202d4b;
     }
     .skill-card p {
-        font-size: relative;
-        color: #000000;
+        font-size: 15px;
+        color: #333;
         line-height: 1.5;
-        color: #bbb;
     }
+
+ /* Bounce Animation */
+@keyframes bounceBall {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+/* Ball */
+.ball {
+  animation: bounceBall 0.8s infinite ease-in-out;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 36px 20px, #ff8c16, #b35100);
+  position: relative;
+  box-shadow: inset -4px -4px 8px rgba(0,0,0,0.4),
+              inset 4px 4px 8px rgba(255,200,120,0.4);
+}
+
+/* Strips on the ball (vertical + horizontal) */
+.ball::before,
+.ball::after {
+  content: "";
+  position: absolute;
+  background: #222;
+  border-radius: 50%;
+}
+
+.ball::before {
+  width: 4px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.ball::after {
+  width: 100%;
+  height: 4px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
