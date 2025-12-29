@@ -7,6 +7,25 @@ const SkillsPage = () => {
     useScrollReveal();
     const mousePos = useMousePosition();
 
+    const technicalSkills = [
+        { name: "HTML5", icon: "https://cdn-icons-png.flaticon.com/512/732/732212.png", level: 95, label: "Expert", desc: "Architecting semantic, SEO-friendly, and accessible web structures." },
+        { name: "CSS3", icon: "https://cdn-icons-png.flaticon.com/512/732/732190.png", level: 90, label: "Expert", desc: "Mastering complex layouts, animations, and glassmorphism." },
+        { name: "JavaScript", icon: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png", level: 85, label: "Advanced", desc: "Developing robust logic, ES6+, and efficient DOM manipulation." },
+        { name: "React", icon: "https://cdn-icons-png.flaticon.com/512/1126/1126012.png", level: 88, label: "Advanced", desc: "Building scalable SPAs using functional components and hooks." },
+        { name: "Node.js", icon: "https://cdn-icons-png.flaticon.com/512/5968/5968322.png", level: 75, label: "Intermediate", desc: "Designing secure server-side architectures and RESTful APIs." },
+        { name: "Python", icon: "https://cdn-icons-png.flaticon.com/512/5968/5968350.png", level: 80, label: "Advanced", desc: "Applying Python for automation, AI foundations, and backend." },
+        { name: "MongoDB", icon: "https://cdn-icons-png.flaticon.com/512/2906/2906274.png", level: 70, label: "Intermediate", desc: "Implementing NoSQL data models and optimized queries." },
+        { name: "Git", icon: "https://cdn-icons-png.flaticon.com/512/4494/4494740.png", level: 85, label: "Advanced", desc: "Streamlining development with advanced version control." },
+    ];
+
+    const softSkills = [
+        { name: "Strategic Planning", icon: "https://cdn-icons-png.flaticon.com/512/2972/2972531.png", level: 90, label: "Expert", desc: "Prioritizing high-impact tasks and workflow efficiency." },
+        { name: "Communication", icon: "https://cdn-icons-png.flaticon.com/512/9746/9746658.png", level: 95, label: "Expert", desc: "Articulating technical concepts clearly to stakeholders." },
+        { name: "Problem Solving", icon: "https://cdn-icons-png.flaticon.com/512/1998/1998310.png", level: 92, label: "Expert", desc: "Approaching challenges with analytical and innovative depth." },
+        { name: "Adaptability", icon: "https://cdn-icons-png.flaticon.com/512/10434/10434606.png", level: 88, label: "Advanced", desc: "Thriving in evolving environments and mastering new tech." },
+        { name: "Collaboration", icon: "https://cdn-icons-png.flaticon.com/512/1256/1256650.png", level: 94, label: "Expert", desc: "Fostering synergy within cross-functional elite teams." },
+    ];
+
     return (
         <div className="skills-page">
             {/* Ambient Background Glows */}
@@ -24,6 +43,7 @@ const SkillsPage = () => {
                     }}
                 ></div>
             </div>
+
             <Link to="/">
                 <button className="back-btn">
                     <i className="fas fa-arrow-left"></i> Back to Home
@@ -47,46 +67,20 @@ const SkillsPage = () => {
                 </div>
 
                 <div className="skills-grid reveal stagger-1">
-                    <div className="skill-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML5" />
-                        <h3>HTML5</h3>
-                        <p>Architecting semantic, SEO-friendly, and accessible web structures for modern applications.</p>
-                    </div>
-                    <div className="skill-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS3" />
-                        <h3>CSS3</h3>
-                        <p>Mastering layouts with Flexbox and Grid, along with complex animations and glassmorphism.</p>
-                    </div>
-                    <div className="skill-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" />
-                        <h3>JavaScript</h3>
-                        <p>Developing robust logic using ES6+, asynchronous programming, and efficient DOM manipulation.</p>
-                    </div>
-                    <div className="skill-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="React" />
-                        <h3>React</h3>
-                        <p>Building scalable and high-performance SPAs using functional components and advanced hooks.</p>
-                    </div>
-                    <div className="skill-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" alt="Node.js" />
-                        <h3>Node.js</h3>
-                        <p>Designing secure and efficient server-side architectures and multi-functional RESTful APIs.</p>
-                    </div>
-                    <div className="skill-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" />
-                        <h3>Python</h3>
-                        <p>Applying Python for automation, AI/ML foundations, and rapid backend service development.</p>
-                    </div>
-                    <div className="skill-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2906/2906274.png" alt="MongoDB" />
-                        <h3>MongoDB</h3>
-                        <p>Implementing agile NoSQL data models and optimizing complex document-based queries.</p>
-                    </div>
-                    <div className="skill-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/4494/4494740.png" alt="Git" />
-                        <h3>Git</h3>
-                        <p>Streamlining development workflows with advanced version control and collaborative strategies.</p>
-                    </div>
+                    {technicalSkills.map((skill, index) => (
+                        <div key={index} className="skill-card">
+                            <div className="skill-header">
+                                <img src={skill.icon} alt={skill.name} />
+                                <span className="skill-label">{skill.label}</span>
+                            </div>
+                            <h3>{skill.name}</h3>
+                            <p>{skill.desc}</p>
+                            <div className="proficiency-container">
+                                <div className="proficiency-bar" style={{ '--level': `${skill.level}%` }}></div>
+                                <span className="proficiency-value">{skill.level}%</span>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
 
@@ -106,31 +100,20 @@ const SkillsPage = () => {
                     </div>
 
                     <div className="skills-grid reveal stagger-2">
-                        <div className="skill-card">
-                            <img src="https://cdn-icons-png.flaticon.com/512/2972/2972531.png" alt="Strategic Planning" />
-                            <h3>Strategic Planning</h3>
-                            <p>Proven ability to prioritize high-impact tasks and optimize workflow efficiency.</p>
-                        </div>
-                        <div className="skill-card">
-                            <img src="https://cdn-icons-png.flaticon.com/512/9746/9746658.png" alt="Communication" />
-                            <h3>Communication</h3>
-                            <p>Articulating complex technical concepts clearly to diverse stakeholders.</p>
-                        </div>
-                        <div className="skill-card">
-                            <img src="https://cdn-icons-png.flaticon.com/512/1998/1998310.png" alt="Problem Solving" />
-                            <h3>Problem Solving</h3>
-                            <p>Approaching challenges with analytical depth and innovative solution design.</p>
-                        </div>
-                        <div className="skill-card">
-                            <img src="https://cdn-icons-png.flaticon.com/512/10434/10434606.png" alt="Adaptability" />
-                            <h3>Adaptability</h3>
-                            <p>Thriving in evolving environments and rapidly mastering new technologies.</p>
-                        </div>
-                        <div className="skill-card">
-                            <img src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png" alt="Collaboration" />
-                            <h3>Collaboration</h3>
-                            <p>Fostering synergy within cross-functional teams to achieve collective excellence.</p>
-                        </div>
+                        {softSkills.map((skill, index) => (
+                            <div key={index} className="skill-card">
+                                <div className="skill-header">
+                                    <img src={skill.icon} alt={skill.name} />
+                                    <span className="skill-label">{skill.label}</span>
+                                </div>
+                                <h3>{skill.name}</h3>
+                                <p>{skill.desc}</p>
+                                <div className="proficiency-container">
+                                    <div className="proficiency-bar" style={{ '--level': `${skill.level}%` }}></div>
+                                    <span className="proficiency-value">{skill.level}%</span>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

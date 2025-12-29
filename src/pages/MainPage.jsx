@@ -175,46 +175,24 @@ const MainPage = () => {
             <section id="page4">
                 <h1 className="reveal">Technical Proficiency</h1>
                 <div className="programming-languages-container reveal stagger-1">
-                    <div className="programming-language">
-                        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML5" />
-                        <span>HTML5</span>
-                    </div>
-                    <div className="programming-language">
-                        <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS3" />
-                        <span>CSS3</span>
-                    </div>
-                    <div className="programming-language">
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" />
-                        <span>JavaScript</span>
-                    </div>
-                    <div className="programming-language">
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" />
-                        <span>Python</span>
-                    </div>
-                    <div className="programming-language">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="React" />
-                        <span>React</span>
-                    </div>
-                    <div className="programming-language">
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" alt="Node.js" />
-                        <span>Node.js</span>
-                    </div>
-                    <div className="programming-language">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2906/2906274.png" alt="MongoDB" />
-                        <span>MongoDB</span>
-                    </div>
-                    <div className="programming-language">
-                        <img src="https://cdn-icons-png.flaticon.com/512/4494/4494740.png" alt="Git" />
-                        <span>Git</span>
-                    </div>
-                    <div className="programming-language">
-                        <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java" />
-                        <span>Java</span>
-                    </div>
-                    <div className="programming-language">
-                        <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++" />
-                        <span>C++</span>
-                    </div>
+                    {[
+                        { name: "HTML5", icon: "https://cdn-icons-png.flaticon.com/512/732/732212.png", level: 95 },
+                        { name: "CSS3", icon: "https://cdn-icons-png.flaticon.com/512/732/732190.png", level: 90 },
+                        { name: "JavaScript", icon: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png", level: 85 },
+                        { name: "Python", icon: "https://cdn-icons-png.flaticon.com/512/5968/5968350.png", level: 80 },
+                        { name: "React", icon: "https://cdn-icons-png.flaticon.com/512/1126/1126012.png", level: 88 },
+                        { name: "Node.js", icon: "https://cdn-icons-png.flaticon.com/512/5968/5968322.png", level: 75 },
+                        { name: "MongoDB", icon: "https://cdn-icons-png.flaticon.com/512/2906/2906274.png", level: 70 },
+                        { name: "Git", icon: "https://cdn-icons-png.flaticon.com/512/4494/4494740.png", level: 85 }
+                    ].map((skill, index) => (
+                        <div key={index} className="programming-language">
+                            <img src={skill.icon} alt={skill.name} />
+                            <span>{skill.name}</span>
+                            <div className="mini-proficiency">
+                                <div className="mini-bar" style={{ '--level': `${skill.level}%` }}></div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
                 <div className="reveal stagger-2">
                     <Link to="/skills">
