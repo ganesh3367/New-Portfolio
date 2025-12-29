@@ -15,7 +15,7 @@ const SkillsPage = () => {
 
             <div className="container">
                 <div className="skills-title reveal">
-                    <h1>Programming Skills</h1>
+                    <h1>Technical Proficiency</h1>
                     <div className="ball-wrap">
                         <div className="ball">
                             <div className="inner">
@@ -31,52 +31,52 @@ const SkillsPage = () => {
 
                 <div className="skills-grid reveal stagger-1">
                     <div className="skill-card">
-                        <img src="/html.png" alt="HTML" />
-                        <h3>HTML</h3>
-                        <p>Experienced in building responsive and semantic HTML structures.</p>
+                        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML5" />
+                        <h3>HTML5</h3>
+                        <p>Architecting semantic, SEO-friendly, and accessible web structures for modern applications.</p>
                     </div>
                     <div className="skill-card">
-                        <img src="/css-3.png" alt="CSS" />
-                        <h3>CSS</h3>
-                        <p>Strong in modern CSS techniques, animations, and layouts.</p>
+                        <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS3" />
+                        <h3>CSS3</h3>
+                        <p>Mastering layouts with Flexbox and Grid, along with complex animations and glassmorphism.</p>
                     </div>
                     <div className="skill-card">
-                        <img src="/js.png" alt="JavaScript" />
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" />
                         <h3>JavaScript</h3>
-                        <p>Proficient in ES6+, DOM manipulation, and interactive UI design.</p>
+                        <p>Developing robust logic using ES6+, asynchronous programming, and efficient DOM manipulation.</p>
                     </div>
                     <div className="skill-card">
-                        <img src="/atom.png" alt="React JS" />
-                        <h3>React JS</h3>
-                        <p>Skilled in building dynamic SPA using React and hooks.</p>
+                        <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="React" />
+                        <h3>React</h3>
+                        <p>Building scalable and high-performance SPAs using functional components and advanced hooks.</p>
                     </div>
                     <div className="skill-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="Node JS" />
-                        <h3>Node JS</h3>
-                        <p>Experience in server-side development and RESTful APIs.</p>
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" alt="Node.js" />
+                        <h3>Node.js</h3>
+                        <p>Designing secure and efficient server-side architectures and multi-functional RESTful APIs.</p>
                     </div>
                     <div className="skill-card">
-                        <img src="/python.png" alt="Python" />
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" />
                         <h3>Python</h3>
-                        <p>Scripting, automation, data work, and backend development.</p>
+                        <p>Applying Python for automation, AI/ML foundations, and rapid backend service development.</p>
                     </div>
                     <div className="skill-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/919/919831.png" alt="MongoDB" />
+                        <img src="https://cdn-icons-png.flaticon.com/512/2906/2906274.png" alt="MongoDB" />
                         <h3>MongoDB</h3>
-                        <p>Experience designing and querying NoSQL document databases.</p>
+                        <p>Implementing agile NoSQL data models and optimizing complex document-based queries.</p>
                     </div>
                     <div className="skill-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3917/3917215.png" alt="Git" />
+                        <img src="https://cdn-icons-png.flaticon.com/512/4494/4494740.png" alt="Git" />
                         <h3>Git</h3>
-                        <p>Version control, branching, pull requests, and team workflows.</p>
+                        <p>Streamlining development workflows with advanced version control and collaborative strategies.</p>
                     </div>
                 </div>
             </div>
 
-            <section>
+            <section className="soft-skills">
                 <div className="container">
                     <div className="skills-title reveal">
-                        <h1>Soft Skills</h1>
+                        <h1>Professional Core</h1>
                         <div className="skills-loader">
                             <div className="loader-square"></div>
                             <div className="loader-square"></div>
@@ -90,29 +90,29 @@ const SkillsPage = () => {
 
                     <div className="skills-grid reveal stagger-2">
                         <div className="skill-card">
-                            <img src="https://img.icons8.com/?size=100&id=2YPST59G2xJZ&format=png&color=000000" alt="Time Management" />
-                            <h3>Time Management</h3>
-                            <p>Ability to prioritize tasks, plan effectively, and meet deadlines efficiently.</p>
+                            <img src="https://cdn-icons-png.flaticon.com/512/2972/2972531.png" alt="Strategic Planning" />
+                            <h3>Strategic Planning</h3>
+                            <p>Proven ability to prioritize high-impact tasks and optimize workflow efficiency.</p>
                         </div>
                         <div className="skill-card">
-                            <img src="https://img.icons8.com/?size=100&id=AVQyR7yVZtgD&format=png&color=000000" alt="Communication" />
+                            <img src="https://cdn-icons-png.flaticon.com/512/9746/9746658.png" alt="Communication" />
                             <h3>Communication</h3>
-                            <p>Skill in expressing thoughts confidently and building meaningful connections.</p>
+                            <p>Articulating complex technical concepts clearly to diverse stakeholders.</p>
                         </div>
                         <div className="skill-card">
-                            <img src="https://img.icons8.com/?size=100&id=IqO8sjenu7je&format=png&color=000000" alt="Marketing" />
-                            <h3>Marketing</h3>
-                            <p>Basic understanding of marketing strategies with a keen interest to learn.</p>
+                            <img src="https://cdn-icons-png.flaticon.com/512/1998/1998310.png" alt="Problem Solving" />
+                            <h3>Problem Solving</h3>
+                            <p>Approaching challenges with analytical depth and innovative solution design.</p>
                         </div>
                         <div className="skill-card">
-                            <img src="https://img.icons8.com/?size=100&id=pSKGjhit2j5J&format=png&color=000000" alt="Adaptability" />
+                            <img src="https://cdn-icons-png.flaticon.com/512/10434/10434606.png" alt="Adaptability" />
                             <h3>Adaptability</h3>
-                            <p>Ability to adjust quickly to new challenges and changing environments.</p>
+                            <p>Thriving in evolving environments and rapidly mastering new technologies.</p>
                         </div>
                         <div className="skill-card">
-                            <img src="https://img.icons8.com/?size=100&id=wG20FqoYHvVB&format=png&color=000000" alt="Team Work" />
-                            <h3>Team Work</h3>
-                            <p>Can collaborate effectively with others to achieve common goals.</p>
+                            <img src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png" alt="Collaboration" />
+                            <h3>Collaboration</h3>
+                            <p>Fostering synergy within cross-functional teams to achieve collective excellence.</p>
                         </div>
                     </div>
                 </div>

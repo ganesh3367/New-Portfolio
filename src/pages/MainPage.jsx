@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import useScrollReveal from '../hooks/useScrollReveal';
 
@@ -46,16 +46,39 @@ const MainPage = () => {
             setIsSubmitting(false);
         }
     };
+    const [markerStyle, setMarkerStyle] = useState({ left: 0, width: 0, opacity: 0 });
+    const navRef = useRef(null);
+
+    const handleMouseEnter = (e) => {
+        const target = e.currentTarget;
+        const rect = target.getBoundingClientRect();
+        const navRect = navRef.current.getBoundingClientRect();
+
+        setMarkerStyle({
+            left: rect.left - navRect.left,
+            width: rect.width,
+            opacity: 1
+        });
+    };
+
+    const handleMouseLeave = () => {
+        setMarkerStyle(prev => ({ ...prev, opacity: 0 }));
+    };
 
     return (
         <div>
-            <nav>
+            <nav ref={navRef}>
+                <div className="nav-marker" style={{
+                    transform: `translateX(${markerStyle.left}px)`,
+                    width: `${markerStyle.width}px`,
+                    opacity: markerStyle.opacity
+                }}></div>
                 <ul>
-                    <li><a href="#page1">Home</a></li>
-                    <li><a href="#page2">About</a></li>
-                    <li><a href="#page3">Projects</a></li>
-                    <li><a href="#page4">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#page1" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Home</a></li>
+                    <li><a href="#page2" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>About</a></li>
+                    <li><a href="#page3" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Projects</a></li>
+                    <li><a href="#page4" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Skills</a></li>
+                    <li><a href="#contact" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Contact</a></li>
                 </ul>
             </nav>
 
@@ -88,12 +111,13 @@ const MainPage = () => {
 
             <section className="page page-2" id="page2">
                 <div id="page2container" className="reveal">
-                    <h1 id="page2head">About Me</h1>
-                    <p id="p2para" >Hello! I'm a first-year engineering student at Newton School of Technology in Pune, specializing in AI and ML. I have a deep passion for technology and problem-solving, which has led me to explore various areas like coding, data structures, algorithms, and Linux-based projects.
+                    <h1 id="page2head">Academic & Professional Journey</h1>
+                    <p id="p2para">
+                        I am an aspiring AI & Machine Learning engineer, currently pursuing my degree at the <strong>Newton School of Technology, Pune</strong>. My focus lies at the intersection of complex problem-solving and scalable system design, with a deep commitment to mastering the foundations of data structures, algorithms, and modern full-stack architectures.
                         <br /><br />
-                        I am actively working on improving my programming skills, particularly in Python, and am focused on developing a strong foundation in logical reasoning and mathematics, which are crucial for solving complex coding problems. My goal is to secure a top-tier placement in Worlds top MNC's and eventually build a career that allows me to contribute to groundbreaking projects in AI and ML.
+                        Driven by a passion for disruptive technologies, I am actively building a portfolio of projects that leverage <strong>Python, React, and Linux-based systems</strong> to solve real-world challenges. My objective is to contribute to high-impact engineering teams at global technology leaders, developing innovative AI solutions that shape the future of machine intelligence.
                         <br /><br />
-                        In addition to academics, I have a variety of interests, including visiting Switzerland, skydiving, and learning scuba diving..
+                        Beyond the terminal, I am an explorer at heart—whether it's planning future expeditions to the Swiss Alps or pursuing the discipline of skydiving and scuba diving.
                     </p>
                 </div>
             </section>
@@ -102,23 +126,28 @@ const MainPage = () => {
                 <h2 id="p3head" className="reveal"><div className="loader2"></div>ProJects</h2>
                 <div className="product-container reveal stagger-1">
                     <div className="product">
-                        <a href="https://ganesh3367.github.io/Shop-File/"><img src="/Shop.JPG" alt="Product 1" className="scroll-effect" /></a>
-                        <p className="Product-text">Furinture Website</p>
+                        <a href="https://ganesh3367.github.io/Shop-File/" target="_blank" rel="noopener noreferrer">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&auto=format&fit=crop&q=80" alt="Furniture Website" className="scroll-effect" />
+                        </a>
+                        <p className="Product-text">Furniture E-commerce</p>
                     </div>
                     <div className="product">
-                        <a href="https://ganyesportfolio.vercel.app/">
-                            <img src="/portfolioname.JPG" alt="Product 2" className="scroll-effect" /></a>
-                        <p className="Product-text">Portfolio</p>
+                        <a href="https://ganyesportfolio.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=80" alt="Portfolio" className="scroll-effect" />
+                        </a>
+                        <p className="Product-text">Digital Portfolio</p>
                     </div>
                     <div className="product">
-                        <a href="https://task-manager-app-one-orpin.vercel.app/">
-                            <img src="/taskmanager.JPG" alt="Product 3" className="scroll-effect" /> </a>
-                        <p className="Product-text">Furniture</p>
+                        <a href="https://task-manager-app-one-orpin.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&auto=format&fit=crop&q=80" alt="Task Manager" className="scroll-effect" />
+                        </a>
+                        <p className="Product-text">Task Intelligence</p>
                     </div>
                     <div className="product">
-                        <a href="https://age-calculator-ten-swart.vercel.app/">
-                            <img src="/IMG.JPG" alt="Product 2" className="scroll-effect" /></a>
-                        <p className="Product-text">Calculator</p>
+                        <a href="https://age-calculator-ten-swart.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            <img src="https://images.unsplash.com/photo-1611224885990-ab7363d1f2a9?w=800&auto=format&fit=crop&q=80" alt="Calculator" className="scroll-effect" />
+                        </a>
+                        <p className="Product-text">Precision Calculator</p>
                     </div>
                 </div>
                 <div className="reveal stagger-2">
@@ -127,38 +156,54 @@ const MainPage = () => {
             </section>
 
             <section id="page4">
-                <h1 className="reveal">Programming Skills</h1>
+                <h1 className="reveal">Technical Proficiency</h1>
                 <div className="programming-languages-container reveal stagger-1">
-                    <div className="programming-language-row">
-                        <div className="programming-language">
-                            <img src="/html.png" alt="HTML" />
-                            <span>HTML</span>
-                        </div>
-                        <div className="programming-language">
-                            <img src="/css-3.png" alt="CSS" />
-                            <span>CSS</span>
-                        </div>
-                        <div className="programming-language">
-                            <img src="/js.png" alt="JavaScript" />
-                            <span>JavaScript</span>
-                        </div>
-                        <div className="programming-language">
-                            <img src="/python.png" alt="Python" />
-                            <span>Python</span>
-                        </div>
+                    <div className="programming-language">
+                        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML5" />
+                        <span>HTML5</span>
                     </div>
-                    <div className="programming-language-row">
-                        <div className="programming-language">
-                            <img src="/atom.png" alt="React" />
-                            <span>React</span>
-                        </div>
-                        <div className="programming-language">
-                            <img src="/java-logo.png" alt="Java" />
-                            <span>Java</span>
-                        </div>
+                    <div className="programming-language">
+                        <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS3" />
+                        <span>CSS3</span>
+                    </div>
+                    <div className="programming-language">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" />
+                        <span>JavaScript</span>
+                    </div>
+                    <div className="programming-language">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" />
+                        <span>Python</span>
+                    </div>
+                    <div className="programming-language">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="React" />
+                        <span>React</span>
+                    </div>
+                    <div className="programming-language">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" alt="Node.js" />
+                        <span>Node.js</span>
+                    </div>
+                    <div className="programming-language">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2906/2906274.png" alt="MongoDB" />
+                        <span>MongoDB</span>
+                    </div>
+                    <div className="programming-language">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4494/4494740.png" alt="Git" />
+                        <span>Git</span>
+                    </div>
+                    <div className="programming-language">
+                        <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java" />
+                        <span>Java</span>
+                    </div>
+                    <div className="programming-language">
+                        <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++" />
+                        <span>C++</span>
                     </div>
                 </div>
-                <div className="reveal stagger-2"><Link to="/skills"><button className="button2" >Show More</button></Link></div>
+                <div className="reveal stagger-2">
+                    <Link to="/skills">
+                        <button className="button2">Explore Full Stack</button>
+                    </Link>
+                </div>
             </section>
 
             <section id="contact">
