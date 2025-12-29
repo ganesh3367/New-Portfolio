@@ -50,7 +50,7 @@ const SkillsPage = () => {
 
             <Link to="/">
                 <button className="back-btn">
-                    <i className="fas fa-arrow-left"></i> Back to Home
+                    <i className="fas fa-arrow-left"></i> <span>Back to Home</span>
                 </button>
             </Link>
 
@@ -83,18 +83,21 @@ const SkillsPage = () => {
                     </div>
                 ))}
 
-                <section className="professional-core-section">
-                    <div className="category-header reveal">
-                        <span className="badge">Soft Skills</span>
-                        <h2>Professional Core</h2>
-                    </div>
-                    <div className="soft-skills-strip reveal stagger-2">
+                <section className="category-section">
+                    <h2 className="reveal">Professional Core & Leadership</h2>
+                    <div className="skills-grid reveal stagger-2">
                         {professionalSkills.map((skill, index) => (
-                            <div key={index} className="soft-skill-tag">
-                                <img src={skill.icon} alt={skill.name} />
-                                <span>{skill.name}</span>
-                                <div className="dot"></div>
-                                <span className="level">{skill.label}</span>
+                            <div key={index} className="skill-card">
+                                <div className="skill-header">
+                                    <img src={skill.icon} alt={skill.name} />
+                                    <span className="skill-label">{skill.label}</span>
+                                </div>
+                                <h3>{skill.name}</h3>
+                                <p>Exhibiting strong {skill.name.toLowerCase()} in collaborative and high-pressure environments.</p>
+                                <div className="proficiency-container">
+                                    <div className="proficiency-bar" style={{ '--level': `${skill.level}%` }}></div>
+                                    <span className="proficiency-value">{skill.level}%</span>
+                                </div>
                             </div>
                         ))}
                     </div>

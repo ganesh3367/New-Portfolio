@@ -84,7 +84,7 @@ const ProjectsPage = () => {
             </div>
             <Link to="/">
                 <button className="back-btn">
-                    <i className="fas fa-arrow-left"></i> Back to Home
+                    <i className="fas fa-arrow-left"></i> <span>Back to Home</span>
                 </button>
             </Link>
 
