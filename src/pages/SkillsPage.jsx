@@ -1,12 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useScrollReveal from '../hooks/useScrollReveal';
+import useMousePosition from '../hooks/useMousePosition';
 
 const SkillsPage = () => {
     useScrollReveal();
+    const mousePos = useMousePosition();
 
     return (
         <div className="skills-page">
+            {/* Ambient Background Glows */}
+            <div className="ambient-bg">
+                <div
+                    className="blob blob-1"
+                    style={{
+                        transform: `translate3d(${mousePos.x * 0.05}px, ${mousePos.y * 0.05}px, 0)`
+                    }}
+                ></div>
+                <div
+                    className="blob blob-2"
+                    style={{
+                        transform: `translate3d(${-mousePos.x * 0.03}px, ${-mousePos.y * 0.03}px, 0)`
+                    }}
+                ></div>
+            </div>
             <Link to="/">
                 <button className="back-btn">
                     <i className="fas fa-arrow-left"></i> Back to Home

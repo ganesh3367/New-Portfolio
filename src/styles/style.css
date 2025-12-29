@@ -5,10 +5,12 @@ body {
   background-color: #0c0c0e;
   /* Darker, more premium background */
   color: #ffffff;
+  cursor: none;
 }
 
 html {
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 .wrapper {
@@ -424,6 +426,39 @@ html {
 
 .programming-language:hover span {
   color: #ffffff;
+}
+
+/* Ambient Background */
+.ambient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(61, 90, 254, 0.08) 0%, transparent 70%);
+  filter: blur(80px);
+  border-radius: 50%;
+  transition: transform 0.2s ease-out;
+}
+
+.blob-1 {
+  top: -10%;
+  left: -10%;
+}
+
+.blob-2 {
+  bottom: -10%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(139, 160, 225, 0.05) 0%, transparent 70%);
 }
 
 /* Nav Css */

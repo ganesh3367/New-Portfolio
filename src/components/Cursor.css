@@ -1,0 +1,63 @@
+.cursor-follower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(61, 90, 254, 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transition: width 0.3s ease, height 0.3s ease, background 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+    transform: translate3d(-50%, -50%, 0);
+    margin: -20px 0 0 -20px;
+    opacity: 0;
+}
+
+.cursor-inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background: #3d5afe;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10001;
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+    transform: translate3d(-50%, -50%, 0);
+    margin: -3px 0 0 -3px;
+    opacity: 0;
+}
+
+.cursor-visible {
+    opacity: 1;
+}
+
+.cursor-hover {
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px;
+    background: rgba(61, 90, 254, 0.1);
+    border-color: rgba(61, 90, 254, 0.8);
+    backdrop-filter: blur(2px);
+}
+
+.cursor-inner-hover {
+    width: 10px;
+    height: 10px;
+    margin: -5px 0 0 -5px;
+}
+
+.cursor-active {
+    transform: scale(0.8);
+    transition: transform 0.1s ease;
+}
+
+@media (max-width: 768px) {
+
+    .cursor-follower,
+    .cursor-inner {
+        display: none;
+    }
+}

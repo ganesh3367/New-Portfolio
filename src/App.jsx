@@ -2,10 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainPage from './pages/MainPage';
 import SkillsPage from './pages/SkillsPage';
 import ProjectsPage from './pages/ProjectsPage';
+import Cursor from './components/Cursor';
 
 function App() {
   return (
     <Router>
+      <Cursor />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/skills.html" element={<SkillsPage />} />

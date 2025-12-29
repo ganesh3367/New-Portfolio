@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import useScrollReveal from '../hooks/useScrollReveal';
+import useMousePosition from '../hooks/useMousePosition';
 
 const MainPage = () => {
     useScrollReveal();
+    const mousePos = useMousePosition();
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const submitToGoogleForm = async (event) => {
@@ -66,7 +68,22 @@ const MainPage = () => {
     };
 
     return (
-        <div>
+        <div id="main">
+            {/* Ambient Background Glows */}
+            <div className="ambient-bg">
+                <div
+                    className="blob blob-1"
+                    style={{
+                        transform: `translate3d(${mousePos.x * 0.05}px, ${mousePos.y * 0.05}px, 0)`
+                    }}
+                ></div>
+                <div
+                    className="blob blob-2"
+                    style={{
+                        transform: `translate3d(${-mousePos.x * 0.03}px, ${-mousePos.y * 0.03}px, 0)`
+                    }}
+                ></div>
+            </div>
             <nav ref={navRef}>
                 <div className="nav-marker" style={{
                     transform: `translateX(${markerStyle.left}px)`,
