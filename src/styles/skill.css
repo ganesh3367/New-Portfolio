@@ -219,66 +219,6 @@
 }
 
 /* --------- Professional Core Strip --------- */
-.professional-core-section {
-  margin-top: 100px;
-  padding: 80px 0;
-  border-top: 1px solid var(--glass-border);
-}
-
-.category-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.soft-skills-strip {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-}
-
-.soft-skill-tag {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  padding: 12px 24px;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  transition: all 0.3s ease;
-}
-
-.soft-skill-tag:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: var(--accent-color);
-  transform: translateY(-3px);
-}
-
-.soft-skill-tag img {
-  height: 24px;
-  width: auto;
-}
-
-.soft-skill-tag span {
-  font-size: 14px;
-  font-weight: 600;
-  color: #fff;
-}
-
-.soft-skill-tag .dot {
-  width: 4px;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-}
-
-.soft-skill-tag .level {
-  font-size: 11px;
-  color: var(--accent-color);
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .dashboard-header h1 {
