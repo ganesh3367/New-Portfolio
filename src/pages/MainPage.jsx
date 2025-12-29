@@ -111,7 +111,7 @@ const MainPage = () => {
                         <div id="paradiv"><p>Hello Everyone! My name is Ganesh, and I'm a first-year engineering student at Newton School of Technology, Pune, specializing in AI and ML. I'm passionate about coding, problem-solving, and exploring new technologies. This portfolio reflects my journey, projects, and aspirations. Feel free to explore my work!</p></div>
                     </div>
                     <div id="imgdiv" className="reveal stagger-2">
-                        <img src="https://wallpapers.com/images/high/cool-portrait-art-of-kakashi-bmf8bsl4blpsq7w7.webp" alt="Portfolio Image" id="image1" />
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1600&auto=format&fit=crop&q=80" alt="Portfolio Image" id="image1" />
                         <a className="button" href="/Resume-Ganesh Wayal 111.pdf" target="_blank">
                             <span className="button__text">Resume</span>
                             <span className="button__icon">
@@ -144,25 +144,25 @@ const MainPage = () => {
                 <div className="product-container reveal stagger-1">
                     <div className="product">
                         <a href="https://ganesh3367.github.io/Shop-File/" target="_blank" rel="noopener noreferrer">
-                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&auto=format&fit=crop&q=80" alt="Furniture Website" className="scroll-effect" />
+                            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=1600&auto=format&fit=crop&q=80" alt="Furniture Website" className="scroll-effect" />
                         </a>
                         <p className="Product-text">Furniture E-commerce</p>
                     </div>
                     <div className="product">
                         <a href="https://ganyesportfolio.vercel.app/" target="_blank" rel="noopener noreferrer">
-                            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=80" alt="Portfolio" className="scroll-effect" />
+                            <img src="https://images.unsplash.com/photo-1635776062127-d379bfcbb9c8?w=1600&auto=format&fit=crop&q=80" alt="Portfolio" className="scroll-effect" />
                         </a>
                         <p className="Product-text">Digital Portfolio</p>
                     </div>
                     <div className="product">
                         <a href="https://task-manager-app-one-orpin.vercel.app/" target="_blank" rel="noopener noreferrer">
-                            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&auto=format&fit=crop&q=80" alt="Task Manager" className="scroll-effect" />
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&auto=format&fit=crop&q=80" alt="Task Manager" className="scroll-effect" />
                         </a>
                         <p className="Product-text">Task Intelligence</p>
                     </div>
                     <div className="product">
                         <a href="https://age-calculator-ten-swart.vercel.app/" target="_blank" rel="noopener noreferrer">
-                            <img src="https://images.unsplash.com/photo-1611224885990-ab7363d1f2a9?w=800&auto=format&fit=crop&q=80" alt="Calculator" className="scroll-effect" />
+                            <img src="https://images.unsplash.com/photo-1611224885507-024844850553?w=1600&auto=format&fit=crop&q=80" alt="Calculator" className="scroll-effect" />
                         </a>
                         <p className="Product-text">Precision Calculator</p>
                     </div>

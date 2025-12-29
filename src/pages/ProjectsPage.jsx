@@ -10,7 +10,7 @@ const projectsData = [
         title: "Furniture E-commerce",
         category: "Full Stack",
         description: "A premium, minimalist shopping experience for modern interiors, featuring advanced search and seamless checkout logic.",
-        image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&auto=format&fit=crop&q=80",
+        image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=1600&auto=format&fit=crop&q=80",
         link: "https://ganesh3367.github.io/Shop-File/",
         tech: ["React", "CSS Modules", "Vite"]
     },
@@ -19,7 +19,7 @@ const projectsData = [
         title: "Digital Portfolio",
         category: "Creative UI",
         description: "An interactive, glassmorphic portfolio designed to showcase digital craftsmanship through smooth motion and high-end aesthetics.",
-        image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=80",
+        image: "https://images.unsplash.com/photo-1635776062127-d379bfcbb9c8?w=1600&auto=format&fit=crop&q=80",
         link: "https://ganyesportfolio.vercel.app/",
         tech: ["React", "Framer Motion", "Vite"]
     },
@@ -28,7 +28,7 @@ const projectsData = [
         title: "Task Intelligence",
         category: "Productivity",
         description: "A secure, robust task management system designed to optimize workflows with real-time state management and intuitive UX.",
-        image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&auto=format&fit=crop&q=80",
+        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&auto=format&fit=crop&q=80",
         link: "https://task-manager-app-one-orpin.vercel.app/",
         tech: ["Node.js", "MongoDB", "Auth0"]
     },
@@ -37,7 +37,7 @@ const projectsData = [
         title: "Precision Calculator",
         category: "Utility",
         description: "A sleek, high-precision utility tool designed for instantaneous calculations with a polished, user-centric interface.",
-        image: "https://images.unsplash.com/photo-1611224885990-ab7363d1f2a9?w=800&auto=format&fit=crop&q=80",
+        image: "https://images.unsplash.com/photo-1611224885507-024844850553?w=1600&auto=format&fit=crop&q=80",
         link: "https://age-calculator-ten-swart.vercel.app/",
         tech: ["JavaScript", "CSS3", "Logic"]
     },
@@ -46,7 +46,7 @@ const projectsData = [
         title: "Market Dashboard",
         category: "Data Viz",
         description: "A sophisticated administrative control panel for e-commerce, visualizing complex market trends and customer behavior in real-time.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&auto=format&fit=crop&q=80",
         link: "#",
         tech: ["Chart.js", "React", "Firebase"]
     },
@@ -55,7 +55,7 @@ const projectsData = [
         title: "Atmosphere Engine",
         category: "IoT / API",
         description: "A real-time atmospheric intelligence platform providing deep localized insights and predictive weather modeling.",
-        image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&auto=format&fit=crop&q=80",
+        image: "https://images.unsplash.com/photo-1592210633465-9c998543449d?w=1600&auto=format&fit=crop&q=80",
         link: "#",
         tech: ["OpenWeather API", "React", "Axios"]
     }
