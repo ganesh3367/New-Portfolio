@@ -34,15 +34,15 @@ export default function Contact() {
             <div className="mt-16 space-y-6">
               <div className="flex flex-col gap-1">
                 <span className="text-sm uppercase tracking-widest text-muted-text">Email</span>
-                <a href="mailto:hello@example.com" className="hover-target text-xl font-medium text-foreground transition-colors hover:text-primary-accent">
-                  hello@example.com
+                <a href="mailto:ganeshwayal250@gmail.com" className="hover-target text-xl font-medium text-foreground transition-colors hover:text-primary-accent">
+                  ganeshwayal250@gmail.com
                 </a>
               </div>
               <div className="flex flex-col gap-1">
                 <span className="text-sm uppercase tracking-widest text-muted-text">Social</span>
                 <div className="flex gap-6">
                   {["Twitter", "LinkedIn", "GitHub", "Instagram"].map((social) => (
-                    <a key={social} href="#" className="hover-target font-medium text-foreground transition-colors hover:text-primary-accent">
+                    <a key={social} href={`https://${social.toLowerCase()}.com`} target="_blank" rel="noopener noreferrer" className="hover-target font-medium text-foreground transition-colors hover:text-primary-accent">
                       {social}
                     </a>
                   ))}
