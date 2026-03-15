@@ -23,7 +23,7 @@ const projects = [
     description: "Fear of Reac Wrote in html we will handle rest",
     color: "#FF5F00",
     image: project2,
-    position: "center center",
+    position: "center top",
   },
   {
     title: "GANY'S Furnitue ",
@@ -32,7 +32,7 @@ const projects = [
     description: "E commerce webpage for u ",
     color: "#9CA3AF",
     image: project3,
-    position: "center center",
+    position: "center top",
   },
 ];
 
