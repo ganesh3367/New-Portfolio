@@ -8,28 +8,31 @@ import project3 from "../assets/images/project3.png";
 
 const projects = [
   {
-    title: "E-Commerce Experience",
-    category: "Web Development",
-    year: "2023",
-    description: "A headless next-gen e-commerce platform with 3D product visualization, seamless checkout flows, and sub-second page transitions.",
+    title: "HELP MY CAR APP",
+    category: "Mobile App Development",
+    year: "2025",
+    description: "Ever stuck when Your car breaks down in the middle of the road? No worries, we got you covered. Just tap a button and get help in minutes.",
     color: "#FF8700",
     image: project1,
+    position: "center top",
   },
   {
-    title: "AI Dashboard",
-    category: "Product Design & Dev",
-    year: "2024",
-    description: "Analytics dashboard for generative AI models. Features real-time data visualization, magnetic UI elements, and complex state management.",
+    title: "HTML TO REACT",
+    category: "Extension",
+    year: "2025",
+    description: "Fear of Reac Wrote in html we will handle rest",
     color: "#FF5F00",
     image: project2,
+    position: "center center",
   },
   {
-    title: "Creative Studio",
+    title: "GANY'S Furnitue ",
     category: "Frontend Dev",
-    year: "2023",
-    description: "Award-winning portfolio for a design agency featuring WebGL fluid simulations, custom GSAP scroll hijacking, and premium typography.",
+    year: "2024",
+    description: "E commerce webpage for u ",
     color: "#9CA3AF",
     image: project3,
+    position: "center center",
   },
 ];
 
@@ -55,7 +58,7 @@ export default function Projects() {
 
 function ProjectCard({ project, index }) {
   const cardRef = useRef(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: cardRef,
     offset: ["start end", "end start"],
@@ -66,19 +69,18 @@ function ProjectCard({ project, index }) {
   return (
     <div ref={cardRef} className="group relative flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-16">
       <div className="relative h-[400px] w-full overflow-hidden rounded-3xl bg-zinc-100 lg:h-[600px] lg:w-2/3 cursor-pointer">
-        {/* Project image with parallax */}
-        <motion.div 
+        <motion.div
           className="absolute inset-0 h-[120%] w-full"
           style={{ y }}
         >
-          <img 
-            src={project.image} 
-            alt={project.title} 
+          <img
+            src={project.image}
+            alt={project.title}
             className="h-full w-full object-cover"
+            style={{ objectPosition: project.position }}
           />
         </motion.div>
-        
-        {/* Overlay hover effect */}
+
         <div className="pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/20" />
       </div>
 
@@ -87,11 +89,11 @@ function ProjectCard({ project, index }) {
           <span className="font-mono text-sm text-primary-accent">{project.category}</span>
           <span className="font-mono text-sm text-muted-text">{project.year}</span>
         </div>
-        
+
         <h3 className="mb-6 text-4xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary-accent lg:text-5xl">
           {project.title}
         </h3>
-        
+
         <p className="mb-8 text-lg text-muted-text">
           {project.description}
         </p>
