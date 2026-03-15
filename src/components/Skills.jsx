@@ -98,7 +98,7 @@ export default function Skills() {
                 scale: 1.02,
                 transition: { duration: 0.4, ease: "easeOut" }
               }}
-              className="group relative flex flex-col p-10 rounded-3xl bg-white/40 border border-black/5 shadow-sm transition-all duration-500 hover:border-primary-accent/30 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] overflow-hidden"
+              className="group relative flex flex-col p-10 rounded-3xl bg-white/60 border border-black/5 shadow-sm transition-all duration-500 hover:border-primary-accent/50 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] overflow-hidden"
             >
               {/* Dynamic Blur Background for each card */}
               <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary-accent/10 blur-3xl transition-all duration-500 group-hover:bg-primary-accent/20" />

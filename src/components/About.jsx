@@ -62,7 +62,7 @@ export default function About() {
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
               <div className="absolute bottom-8 left-8 right-8">
-                <p className="font-mono text-xl font-bold tracking-wider text-primary-accent">GANESH WAYAL</p>
+                <p className="font-mono text-xl font-bold tracking-wider text-white">GANESH WAYAL</p>
                 <p className="text-sm text-muted-text">Based in [Pune]</p>
               </div>
             </div>

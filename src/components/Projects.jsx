@@ -94,7 +94,6 @@ function ProjectCard({ project, index }) {
 
   const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.2, 1, 1.1]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   return (
     <motion.div 
@@ -105,7 +104,7 @@ function ProjectCard({ project, index }) {
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: index * 0.1 }}
       className="group relative flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-16"
     >
-      <div className="relative h-[400px] w-full overflow-hidden rounded-3xl bg-white/50 border border-black/5 lg:h-[650px] lg:w-2/3 cursor-pointer p-12 backdrop-blur-sm shadow-sm transition-all duration-500 hover:shadow-2xl">
+      <div className="relative h-[400px] w-full overflow-hidden rounded-3xl bg-white/80 border border-black/5 lg:h-[650px] lg:w-2/3 cursor-pointer p-12 backdrop-blur-sm shadow-sm transition-all duration-500 hover:shadow-2xl">
         <motion.div
           className="absolute inset-0 h-full w-full"
           style={{ y, scale }}
@@ -142,7 +141,7 @@ function ProjectCard({ project, index }) {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="mb-6 text-4xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary-accent lg:text-5xl"
+          className="mb-6 text-4xl font-bold text-foreground lg:text-5xl"
         >
           {project.title}
         </motion.h3>

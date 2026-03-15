@@ -180,7 +180,7 @@ export default function Contact() {
                   </button>
                 </Magnetic>
               </form>
-              <iframe name="hidden_iframe" id="hidden_iframe" style={{ display: "none" }}></iframe>
+              <iframe title="Hidden Form Response" name="hidden_iframe" id="hidden_iframe" style={{ display: "none" }}></iframe>
             </>
           )}
         </motion.div>

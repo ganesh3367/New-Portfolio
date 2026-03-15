@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --background: #FFFFFF;
-  --background-subtle: #fafafa;
-  --foreground: #000000;
-  --primary-accent: #D2FF00;
-  --secondary-accent: #000000;
-  --muted-text: #666666;
+  --background: #F8FAFC;
+  --background-subtle: #F1F5F9;
+  --foreground: #0F172A;
+  --primary-accent: #2563EB;
+  --secondary-accent: #1E293B;
+  --muted-text: #64748B;
   --font-geist-sans: "Inter", "Outfit", "Arial", sans-serif;
   --font-geist-mono: "Fira Code", monospace;
-  --grid-line: #d1d1d1;
+  --grid-line: #E2E8F0;
 }
 
 body {
