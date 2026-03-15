@@ -13,33 +13,37 @@ const tech = [
 
 export default function TechStack() {
   return (
-    <section className="relative flex h-[80vh] w-full items-center justify-center overflow-hidden bg-background py-20">
-      <div className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center">
-        <h2 className="text-[10vw] font-black uppercase text-foreground/5 tracking-tighter">
-          Technologies
+    <section className="relative flex min-h-[90vh] w-full items-center justify-center overflow-hidden bg-background py-32 sm:py-40">
+      {/* Background Decor */}
+      <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
+        <div className="h-[600px] w-[600px] bg-primary-accent/10 rounded-full blur-[150px] animate-pulse" />
+        <div className="h-[400px] w-[400px] bg-secondary-accent/5 rounded-full blur-[100px] absolute translate-x-1/2 -translate-y-1/2" />
+        <h2 className="text-[15vw] font-black uppercase text-foreground/[0.03] tracking-tighter whitespace-nowrap">
+          Arsenal
         </h2>
       </div>
       
-      <div className="relative z-20 flex h-full w-full items-center justify-center">
+      <div className="relative z-20 flex h-full w-full max-w-7xl items-center justify-center">
         {tech.map((item, i) => (
           <motion.div
             key={i}
-            className="absolute flex h-16 px-6 cursor-pointer items-center justify-center rounded-2xl border-2 border-foreground bg-primary-accent shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-transform hover:scale-110"
-            initial={{ x: item.x * 0.5, y: item.y * 0.5, opacity: 0 }}
-            whileInView={{ x: item.x, y: item.y, opacity: 1 }}
+            className="absolute flex h-16 px-6 cursor-pointer items-center justify-center rounded-2xl border border-black/10 bg-white shadow-[10px_10px_30px_rgba(0,0,0,0.05)] backdrop-blur-sm transition-all hover:border-primary-accent group"
+            initial={{ x: item.x * 2, y: item.y * 2, opacity: 0, scale: 0.5 }}
+            whileInView={{ x: item.x, y: item.y, opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{
               type: "spring",
-              stiffness: 50,
-              damping: 10,
+              stiffness: 80,
+              damping: 15,
               delay: i * 0.1,
-            }}
-            animate={{
-              y: [item.y, item.y - 15, item.y],
+              duration: 4 + i,
+              repeat: Infinity,
+              ease: "easeInOut"
             }}
             style={{ x: item.x, y: item.y }}
           >
-            <span className="font-bold text-foreground text-lg">{item.name}</span>
+            <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary-accent to-secondary-accent opacity-0 blur transition-opacity group-hover:opacity-20" />
+            <span className="relative z-10 font-bold text-foreground text-lg">{item.name}</span>
           </motion.div>
         ))}
       </div>

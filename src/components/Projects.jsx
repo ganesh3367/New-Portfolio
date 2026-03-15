@@ -69,7 +69,14 @@ function ProjectCard({ project, index }) {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   return (
-    <div ref={cardRef} className="group relative flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-16">
+    <motion.div 
+      ref={cardRef} 
+      initial={{ opacity: 0, scale: 0.9, y: 50 }}
+      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+      className="group relative flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-16"
+    >
       <div className="relative h-[400px] w-full overflow-hidden rounded-3xl bg-white/[0.03] border border-black/5 lg:h-[600px] lg:w-2/3 cursor-pointer p-8">
         <motion.div
           className="absolute inset-0 h-full w-full"
@@ -105,6 +112,6 @@ function ProjectCard({ project, index }) {
           </button>
         </Magnetic>
       </div>
-    </div>
+    </motion.div>
   );
 }
