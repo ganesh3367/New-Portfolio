@@ -34,24 +34,24 @@ export default function Hero() {
   const title = "Full Stack\nDeveloper";
 
   return (
-    <section 
-      ref={container} 
+    <section
+      ref={container}
       className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-grid"
     >
-      <motion.div 
+      <motion.div
         className="relative z-10 flex w-full max-w-7xl flex-col px-4 sm:px-8 md:px-12 lg:px-20"
         style={{ y, opacity }}
       >
-        <motion.p 
+        <motion.p
           className="mb-4 text-xl font-medium tracking-wider text-muted-text sm:text-2xl"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 2.5 }}
         >
-          Hi, I am John Doe
+          Hi, I am Ganesh Wayal
         </motion.p>
-        
-        <motion.h1 
+
+        <motion.h1
           className="font-sans text-6xl font-black uppercase leading-[1.1] tracking-tighter text-foreground sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem]"
           variants={titleVariants}
           initial="hidden"
@@ -78,19 +78,19 @@ export default function Hero() {
           ))}
         </motion.h1>
 
-        <motion.div 
+        <motion.div
           className="mt-8 max-w-2xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 3 }}
         >
           <p className="text-lg leading-relaxed text-muted-text sm:text-xl">
-            I craft premium digital experiences using modern web technologies. 
+            I craft premium digital experiences using modern web technologies.And Build Apps Also.
             Focused on performance, animations, and beautiful user interfaces.
           </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="mt-12 flex gap-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ export default function Hero() {
               <div className="absolute left-1/2 top-1/2 z-0 h-[200%] w-[200%] -translate-x-1/2 -translate-y-1/2 scale-0 rounded-full bg-primary-accent transition-transform duration-500 group-hover:scale-100" />
             </button>
           </Magnetic>
-          
+
           <Magnetic>
             <button className="hover-target group flex h-14 items-center justify-center rounded-full border-2 border-foreground/20 px-8 font-medium text-foreground transition-all hover:border-foreground hover:bg-black/5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
               Contact Me
@@ -112,7 +112,7 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         className="absolute bottom-10 left-1/2 -translate-x-1/2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

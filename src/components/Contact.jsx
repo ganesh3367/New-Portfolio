@@ -13,7 +13,7 @@ export default function Contact() {
   return (
     <section className="relative min-h-screen bg-background py-32 px-4 sm:px-8 md:px-12 lg:px-20">
       <div className="mx-auto flex max-w-7xl flex-col lg:flex-row lg:gap-20">
-        
+
         <div className="mb-20 flex-1 lg:mb-0">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -26,7 +26,7 @@ export default function Contact() {
               <span className="text-muted-text">something</span> <br />
               <span className="bg-gradient-to-r from-primary-accent to-secondary-accent bg-clip-text text-transparent">together.</span>
             </h2>
-            
+
             <p className="max-w-md text-xl text-muted-text">
               Have a project in mind? Looking to partner or work together? Reach out through the form and I'll get back to you in the next 48 hours.
             </p>
@@ -35,7 +35,7 @@ export default function Contact() {
               <div className="flex flex-col gap-1">
                 <span className="text-sm uppercase tracking-widest text-muted-text">Email</span>
                 <a href="mailto:ganeshwayal250@gmail.com" className="hover-target text-xl font-medium text-foreground transition-colors hover:text-primary-accent">
-                  ganeshwayal250@gmail.com
+                  ganeshwayal@gmail.com
                 </a>
               </div>
               <div className="flex flex-col gap-1">
@@ -52,30 +52,29 @@ export default function Contact() {
           </motion.div>
         </div>
 
-        <motion.div 
+        <motion.div
           className="flex-1"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <form 
-            className="flex flex-col gap-12" 
+          <form
+            className="flex flex-col gap-12"
             action="https://docs.google.com/forms/u/0/d/e/YOUR_FORM_ID/formResponse"
             method="POST"
             target="_blank"
           >
             <div className="relative group">
-              <label 
-                className={`absolute left-0 transition-all duration-300 ${
-                  focusedInput === "name" ? "-top-6 text-xs text-primary-accent" : "top-2 text-lg text-muted-text"
-                }`}
+              <label
+                className={`absolute left-0 transition-all duration-300 ${focusedInput === "name" ? "-top-6 text-xs text-primary-accent" : "top-2 text-lg text-muted-text"
+                  }`}
               >
                 What's your name?
               </label>
-              <input 
-                type="text" 
-                name="entry.123456789"
+              <input
+                type="text"
+                name="entry.540519818"
                 onFocus={() => handleFocus("name")}
                 onBlur={handleBlur}
                 className="w-full bg-transparent border-b border-black/20 py-2 text-xl text-foreground outline-none transition-colors focus:border-primary-accent"
@@ -84,16 +83,15 @@ export default function Contact() {
             </div>
 
             <div className="relative group">
-              <label 
-                className={`absolute left-0 transition-all duration-300 ${
-                  focusedInput === "email" ? "-top-6 text-xs text-primary-accent" : "top-2 text-lg text-muted-text"
-                }`}
+              <label
+                className={`absolute left-0 transition-all duration-300 ${focusedInput === "email" ? "-top-6 text-xs text-primary-accent" : "top-2 text-lg text-muted-text"
+                  }`}
               >
                 What's your email?
               </label>
-              <input 
-                type="email" 
-                name="entry.987654321"
+              <input
+                type="email"
+                name="entry.1814335426"
                 onFocus={() => handleFocus("email")}
                 onBlur={handleBlur}
                 className="w-full bg-transparent border-b border-black/20 py-2 text-xl text-foreground outline-none transition-colors focus:border-primary-accent"
@@ -102,15 +100,14 @@ export default function Contact() {
             </div>
 
             <div className="relative group">
-              <label 
-                className={`absolute left-0 transition-all duration-300 ${
-                  focusedInput === "message" ? "-top-6 text-xs text-primary-accent" : "top-2 text-lg text-muted-text"
-                }`}
+              <label
+                className={`absolute left-0 transition-all duration-300 ${focusedInput === "message" ? "-top-6 text-xs text-primary-accent" : "top-2 text-lg text-muted-text"
+                  }`}
               >
                 Tell me about your project
               </label>
-              <textarea 
-                name="entry.111222333"
+              <textarea
+                name="entry.636509076"
                 rows={4}
                 onFocus={() => handleFocus("message")}
                 onBlur={handleBlur}
