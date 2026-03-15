@@ -81,7 +81,7 @@ export default function Contact() {
         >
           <form
             className="flex flex-col gap-12"
-            action="https://docs.google.com/forms/u/0/d/e/YOUR_FORM_ID/formResponse"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdzSHxGq7q5flv32_v6KeX5ga9lzOodmnPuHiiQztcaFD5r8w/formResponse"
             method="POST"
             target="_blank"
           >
