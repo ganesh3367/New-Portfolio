@@ -6,9 +6,29 @@ import { Send } from "lucide-react";
 
 export default function Contact() {
   const [focusedInput, setFocusedInput] = useState(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
 
   const handleFocus = (name) => setFocusedInput(name);
   const handleBlur = () => setFocusedInput(null);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    // Map the entry field names back to our state keys
+    const fieldMapping = {
+      "entry.540519818": "name",
+      "entry.1814335426": "email",
+      "entry.636509076": "message"
+    };
+    const fieldKey = fieldMapping[name];
+    if (fieldKey) {
+      setFormData(prev => ({ ...prev, [fieldKey]: value }));
+    }
+  };
+
+  const isActive = (name) => focusedInput === name || formData[name].length > 0;
 
   return (
     <section className="relative min-h-screen bg-background py-32 px-4 sm:px-8 md:px-12 lg:px-20">
@@ -67,7 +87,7 @@ export default function Contact() {
           >
             <div className="relative group">
               <label
-                className={`absolute left-0 transition-all duration-300 ${focusedInput === "name" ? "-top-6 text-xs text-primary-accent" : "top-2 text-lg text-muted-text"
+                className={`absolute left-0 transition-all duration-300 ${isActive("name") ? "-top-6 text-xs text-primary-accent" : "top-2 text-lg text-muted-text"
                   }`}
               >
                 What's your name?
@@ -75,6 +95,8 @@ export default function Contact() {
               <input
                 type="text"
                 name="entry.540519818"
+                value={formData.name}
+                onChange={handleChange}
                 onFocus={() => handleFocus("name")}
                 onBlur={handleBlur}
                 className="w-full bg-transparent border-b border-black/20 py-2 text-xl text-foreground outline-none transition-colors focus:border-primary-accent"
@@ -84,7 +106,7 @@ export default function Contact() {
 
             <div className="relative group">
               <label
-                className={`absolute left-0 transition-all duration-300 ${focusedInput === "email" ? "-top-6 text-xs text-primary-accent" : "top-2 text-lg text-muted-text"
+                className={`absolute left-0 transition-all duration-300 ${isActive("email") ? "-top-6 text-xs text-primary-accent" : "top-2 text-lg text-muted-text"
                   }`}
               >
                 What's your email?
@@ -92,6 +114,8 @@ export default function Contact() {
               <input
                 type="email"
                 name="entry.1814335426"
+                value={formData.email}
+                onChange={handleChange}
                 onFocus={() => handleFocus("email")}
                 onBlur={handleBlur}
                 className="w-full bg-transparent border-b border-black/20 py-2 text-xl text-foreground outline-none transition-colors focus:border-primary-accent"
@@ -101,13 +125,15 @@ export default function Contact() {
 
             <div className="relative group">
               <label
-                className={`absolute left-0 transition-all duration-300 ${focusedInput === "message" ? "-top-6 text-xs text-primary-accent" : "top-2 text-lg text-muted-text"
+                className={`absolute left-0 transition-all duration-300 ${isActive("message") ? "-top-6 text-xs text-primary-accent" : "top-2 text-lg text-muted-text"
                   }`}
               >
                 Tell me about your project
               </label>
               <textarea
                 name="entry.636509076"
+                value={formData.message}
+                onChange={handleChange}
                 rows={4}
                 onFocus={() => handleFocus("message")}
                 onBlur={handleBlur}
