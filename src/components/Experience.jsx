@@ -34,13 +34,9 @@ export default function Experience() {
   const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <section className="relative min-h-screen bg-background py-32 px-4 sm:px-8 md:px-12 lg:px-20 overflow-hidden">
+    <section className="relative min-h-screen bg-[#fafafa] py-32 px-4 sm:px-8 md:px-12 lg:px-20 overflow-hidden">
       {/* Background Decor */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="mesh-gradient-2 absolute inset-0" />
-        <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-primary-accent/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-secondary-accent/10 rounded-full blur-[120px]" />
-      </div>
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary-accent/5 rounded-full blur-[100px] pointer-events-none" />
       
       <div className="mx-auto max-w-7xl relative z-10">
         <div className="mb-20">
@@ -83,23 +79,10 @@ function ExperienceItem({ exp, index }) {
       {/* Content block */}
       <motion.div
         className="w-full md:w-1/2 pt-4 md:pt-0"
-        initial={{ 
-          opacity: 0, 
-          x: isEven ? -150 : 150, 
-          y: 100,
-          rotate: isEven ? -10 : 10
-        }}
-        whileInView={{ 
-          opacity: 1, 
-          x: 0, 
-          y: 0,
-          rotate: 0
-        }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ 
-          duration: 1.2, 
-          ease: [0.22, 1, 0.36, 1] 
-        }}
+        initial={{ opacity: 0, y: 50, x: isEven ? -50 : 50 }}
+        whileInView={{ opacity: 1, y: 0, x: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className={`flex flex-col ${isEven ? 'md:items-start' : 'md:items-end text-left md:text-right'}`}>
           <span className="mb-2 font-mono text-sm text-primary-accent">{exp.period}</span>
