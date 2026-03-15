@@ -4,28 +4,28 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const experiences = [
   {
-    role: "Senior Full Stack Engineer",
-    company: "TechNova Inc.",
-    period: "2022 - Present",
-    description: "Leading the frontend architecture for an enterprise SaaS platform. Mentoring junior developers and implementing micro-frontends.",
+    role: "Rookie Just jin college ",
+    company: "Selftaught",
+    period: "2024",
+    description: "Start my College jouney with zero knowledge at the end of 2024 complete mastrey in HTML CSS JS",
   },
   {
-    role: "Frontend Developer",
-    company: "Creative Studio",
-    period: "2020 - 2022",
-    description: "Developed award-winning marketing websites using React, Three.js, and GSAP. Improved site performance by 40%.",
+    role: "Chapter 2",
+    company: "MY Version 2,0",
+    period: "2025",
+    description: "Master in Frontend Backend and Full Stack Development Also Complete DSA",
   },
   {
-    role: "Web Developer",
-    company: "StartupLab",
-    period: "2018 - 2020",
-    description: "Built scalable web applications from scratch. Collaborated closely with designers to ensure pixel-perfect implementations.",
+    role: "Chapter 3",
+    company: "MY Version 3,0",
+    period: "2026",
+    description: "App Development and Full Stack Development with React Native and NodeJs And Also DATABASE Mastery in MONGODB and MYSQL ",
   },
 ];
 
 export default function Experience() {
   const containerRef = useRef(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start center", "end center"],
@@ -45,8 +45,8 @@ export default function Experience() {
         <div ref={containerRef} className="relative">
           {/* Animated vertical line */}
           <div className="absolute left-0 top-0 h-full w-[2px] bg-transparent border border-black/10 md:left-1/2 md:-translate-x-1/2" />
-          
-          <motion.div 
+
+          <motion.div
             className="absolute left-0 top-0 h-full w-[2px] origin-top bg-gradient-to-b from-primary-accent to-secondary-accent md:left-1/2 md:-translate-x-1/2"
             style={{ scaleY: pathLength }}
           />
@@ -69,12 +69,12 @@ function ExperienceItem({ exp, index }) {
     <div className={`relative flex flex-col md:flex-row ${isEven ? 'md:flex-row-reverse' : ''} justify-center gap-8 md:gap-16 pl-8 md:pl-0`}>
       {/* Timeline dot */}
       <div className="absolute left-[-29px] top-6 h-4 w-4 rounded-full border-4 border-background bg-primary-accent md:left-1/2 md:-ml-2 md:top-1/2 md:-translate-y-1/2" />
-      
+
       {/* Empty space for alternating layout */}
       <div className="hidden w-1/2 md:block" />
 
       {/* Content block */}
-      <motion.div 
+      <motion.div
         className="w-full md:w-1/2 pt-4 md:pt-0"
         initial={{ opacity: 0, y: 50, x: isEven ? -50 : 50 }}
         whileInView={{ opacity: 1, y: 0, x: 0 }}
