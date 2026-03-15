@@ -38,7 +38,9 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="relative bg-background py-32 px-4 sm:px-8 md:px-12 lg:px-20">
+    <section className="relative bg-[#fafafa] py-32 px-4 sm:px-8 md:px-12 lg:px-20 overflow-hidden">
+      {/* Background Decor */}
+      <div className="absolute top-0 left-[-10%] w-[600px] h-[600px] bg-primary-accent/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="mx-auto max-w-7xl">
         <div className="mb-20">
           <h2 className="text-5xl font-bold tracking-tighter text-foreground sm:text-7xl">

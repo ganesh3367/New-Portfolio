@@ -34,8 +34,11 @@ export default function Experience() {
   const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <section className="relative bg-background py-32 px-4 sm:px-8 md:px-12 lg:px-20">
-      <div className="mx-auto max-w-4xl">
+    <section className="relative min-h-screen bg-[#fafafa] py-32 px-4 sm:px-8 md:px-12 lg:px-20 overflow-hidden">
+      {/* Background Decor */}
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary-accent/5 rounded-full blur-[100px] pointer-events-none" />
+      
+      <div className="mx-auto max-w-7xl relative z-10">
         <div className="mb-20">
           <h2 className="text-5xl font-bold tracking-tighter text-foreground sm:text-7xl">
             <span className="text-muted-text">04.</span> Experience
