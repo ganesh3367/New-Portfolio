@@ -37,21 +37,47 @@ const projects = [
 ];
 
 export default function Projects() {
+  const sectionRef = useRef(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const xBg = useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]);
+
   return (
-    <section className="relative bg-[#fafafa] py-32 px-4 sm:px-8 md:px-12 lg:px-20 overflow-hidden">
+    <section 
+      ref={sectionRef}
+      className="relative bg-[#fafafa] py-32 px-4 sm:px-8 md:px-12 lg:px-20 overflow-hidden"
+    >
+      {/* Background Scrolling Text */}
+      <motion.div 
+        style={{ x: xBg }}
+        className="pointer-events-none absolute top-1/2 left-0 -translate-y-1/2 whitespace-nowrap text-[25vw] font-black leading-none text-black/5 select-none"
+      >
+        SELECTED WORK SELECTED WORK
+      </motion.div>
+
       {/* Background Decor */}
       <div className="absolute top-0 left-[-10%] w-[600px] h-[600px] bg-primary-accent/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="mx-auto max-w-7xl">
+      
+      <div className="mx-auto max-w-7xl relative z-10">
         <div className="mb-20">
-          <h2 className="text-5xl font-bold tracking-tighter text-foreground sm:text-7xl">
+          <motion.h2 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="text-5xl font-bold tracking-tighter text-foreground sm:text-7xl"
+          >
             <span className="text-muted-text">03.</span> Selected Work
-          </h2>
+          </motion.h2>
         </div>
 
         <div className="flex flex-col gap-32">
-          {projects.map((project, index) => {
-            return <ProjectCard key={index} project={project} index={index} />;
-          })}
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} index={index} />
+          ))}
         </div>
       </div>
     </section>
@@ -66,45 +92,84 @@ function ProjectCard({ project, index }) {
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.2, 1, 1.1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   return (
-    <div ref={cardRef} className="group relative flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-16">
-      <div className="relative h-[400px] w-full overflow-hidden rounded-3xl bg-white/[0.03] border border-black/5 lg:h-[600px] lg:w-2/3 cursor-pointer p-8">
+    <motion.div 
+      ref={cardRef} 
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: index * 0.1 }}
+      className="group relative flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-16"
+    >
+      <div className="relative h-[400px] w-full overflow-hidden rounded-3xl bg-white/50 border border-black/5 lg:h-[650px] lg:w-2/3 cursor-pointer p-12 backdrop-blur-sm shadow-sm transition-all duration-500 hover:shadow-2xl">
         <motion.div
           className="absolute inset-0 h-full w-full"
-          style={{ y }}
+          style={{ y, scale }}
         >
           <img
             src={project.image}
             alt={project.title}
-            className="h-full w-full object-contain"
+            className="h-full w-full object-contain p-8 md:p-16"
           />
         </motion.div>
 
-        <div className="pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/20" />
+        <div className="pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/5" />
+        
+        {/* Floating Number */}
+        <div className="absolute right-8 top-8 text-6xl font-black text-black/5 transition-colors duration-500 group-hover:text-primary-accent/10">
+          0{index + 1}
+        </div>
       </div>
 
       <div className="flex w-full flex-col justify-center lg:w-1/3">
-        <div className="mb-4 flex items-center justify-between border-b border-black/10 pb-4">
-          <span className="font-mono text-sm text-primary-accent">{project.category}</span>
+        <motion.div 
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="mb-4 flex items-center justify-between border-b border-black/10 pb-4"
+        >
+          <span className="font-mono text-sm text-primary-accent tracking-widest uppercase">{project.category}</span>
           <span className="font-mono text-sm text-muted-text">{project.year}</span>
-        </div>
+        </motion.div>
 
-        <h3 className="mb-6 text-4xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary-accent lg:text-5xl">
+        <motion.h3 
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="mb-6 text-4xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary-accent lg:text-5xl"
+        >
           {project.title}
-        </h3>
+        </motion.h3>
 
-        <p className="mb-8 text-lg text-muted-text">
+        <motion.p 
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          className="mb-8 text-lg text-muted-text leading-relaxed"
+        >
           {project.description}
-        </p>
+        </motion.p>
 
-        <Magnetic>
-          <button className="hover-target flex h-14 w-14 items-center justify-center rounded-full border border-black/20 text-foreground transition-colors hover:bg-transparent border border-black hover:text-black">
-            <ArrowUpRight size={24} />
-          </button>
-        </Magnetic>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6 }}
+        >
+          <Magnetic>
+            <button className="hover-target flex h-16 w-16 items-center justify-center rounded-full border border-black/10 text-foreground transition-all duration-500 hover:bg-black hover:text-white group-hover:border-primary-accent">
+              <ArrowUpRight size={28} className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </button>
+          </Magnetic>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
