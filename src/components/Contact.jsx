@@ -59,7 +59,12 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <form className="flex flex-col gap-12" onSubmit={(e) => e.preventDefault()}>
+          <form 
+            className="flex flex-col gap-12" 
+            action="https://docs.google.com/forms/u/0/d/e/YOUR_FORM_ID/formResponse"
+            method="POST"
+            target="_blank"
+          >
             <div className="relative group">
               <label 
                 className={`absolute left-0 transition-all duration-300 ${
@@ -70,10 +75,11 @@ export default function Contact() {
               </label>
               <input 
                 type="text" 
-                name="name"
+                name="entry.123456789"
                 onFocus={() => handleFocus("name")}
                 onBlur={handleBlur}
                 className="w-full bg-transparent border-b border-black/20 py-2 text-xl text-foreground outline-none transition-colors focus:border-primary-accent"
+                required
               />
             </div>
 
@@ -87,10 +93,11 @@ export default function Contact() {
               </label>
               <input 
                 type="email" 
-                name="email"
+                name="entry.987654321"
                 onFocus={() => handleFocus("email")}
                 onBlur={handleBlur}
                 className="w-full bg-transparent border-b border-black/20 py-2 text-xl text-foreground outline-none transition-colors focus:border-primary-accent"
+                required
               />
             </div>
 
@@ -103,11 +110,12 @@ export default function Contact() {
                 Tell me about your project
               </label>
               <textarea 
-                name="message"
+                name="entry.111222333"
                 rows={4}
                 onFocus={() => handleFocus("message")}
                 onBlur={handleBlur}
                 className="w-full resize-none bg-transparent border-b border-black/20 py-2 text-xl text-foreground outline-none transition-colors focus:border-primary-accent"
+                required
               />
             </div>
 
