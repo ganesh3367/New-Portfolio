@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './index.css';
+import SmoothScroll from './components/SmoothScroll';
+import CustomCursor from './components/CustomCursor';
+import PageLoader from './components/PageLoader';
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import TechStack from './components/TechStack';
+import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="antialiased selection:bg-primary-accent selection:text-foreground font-sans">
+      <PageLoader />
+      <CustomCursor />
+      <SmoothScroll>
+        <main className="flex min-h-screen flex-col bg-background text-foreground">
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Experience />
+          <TechStack />
+          <Contact />
+        </main>
+      </SmoothScroll>
     </div>
   );
 }

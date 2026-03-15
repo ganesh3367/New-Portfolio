@@ -1,0 +1,129 @@
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+import Magnetic from "./Magnetic";
+import { Send } from "lucide-react";
+
+export default function Contact() {
+  const [focusedInput, setFocusedInput] = useState(null);
+
+  const handleFocus = (name) => setFocusedInput(name);
+  const handleBlur = () => setFocusedInput(null);
+
+  return (
+    <section className="relative min-h-screen bg-background py-32 px-4 sm:px-8 md:px-12 lg:px-20">
+      <div className="mx-auto flex max-w-7xl flex-col lg:flex-row lg:gap-20">
+        
+        <div className="mb-20 flex-1 lg:mb-0">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="mb-8 text-5xl font-bold tracking-tighter text-foreground sm:text-7xl lg:text-8xl">
+              Let's create <br />
+              <span className="text-muted-text">something</span> <br />
+              <span className="bg-gradient-to-r from-primary-accent to-secondary-accent bg-clip-text text-transparent">together.</span>
+            </h2>
+            
+            <p className="max-w-md text-xl text-muted-text">
+              Have a project in mind? Looking to partner or work together? Reach out through the form and I'll get back to you in the next 48 hours.
+            </p>
+
+            <div className="mt-16 space-y-6">
+              <div className="flex flex-col gap-1">
+                <span className="text-sm uppercase tracking-widest text-muted-text">Email</span>
+                <a href="mailto:hello@example.com" className="hover-target text-xl font-medium text-foreground transition-colors hover:text-primary-accent">
+                  hello@example.com
+                </a>
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-sm uppercase tracking-widest text-muted-text">Social</span>
+                <div className="flex gap-6">
+                  {["Twitter", "LinkedIn", "GitHub", "Instagram"].map((social) => (
+                    <a key={social} href="#" className="hover-target font-medium text-foreground transition-colors hover:text-primary-accent">
+                      {social}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        <motion.div 
+          className="flex-1"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <form className="flex flex-col gap-12" onSubmit={(e) => e.preventDefault()}>
+            <div className="relative group">
+              <label 
+                className={`absolute left-0 transition-all duration-300 ${
+                  focusedInput === "name" ? "-top-6 text-xs text-primary-accent" : "top-2 text-lg text-muted-text"
+                }`}
+              >
+                What's your name?
+              </label>
+              <input 
+                type="text" 
+                name="name"
+                onFocus={() => handleFocus("name")}
+                onBlur={handleBlur}
+                className="w-full bg-transparent border-b border-black/20 py-2 text-xl text-foreground outline-none transition-colors focus:border-primary-accent"
+              />
+            </div>
+
+            <div className="relative group">
+              <label 
+                className={`absolute left-0 transition-all duration-300 ${
+                  focusedInput === "email" ? "-top-6 text-xs text-primary-accent" : "top-2 text-lg text-muted-text"
+                }`}
+              >
+                What's your email?
+              </label>
+              <input 
+                type="email" 
+                name="email"
+                onFocus={() => handleFocus("email")}
+                onBlur={handleBlur}
+                className="w-full bg-transparent border-b border-black/20 py-2 text-xl text-foreground outline-none transition-colors focus:border-primary-accent"
+              />
+            </div>
+
+            <div className="relative group">
+              <label 
+                className={`absolute left-0 transition-all duration-300 ${
+                  focusedInput === "message" ? "-top-6 text-xs text-primary-accent" : "top-2 text-lg text-muted-text"
+                }`}
+              >
+                Tell me about your project
+              </label>
+              <textarea 
+                name="message"
+                rows={4}
+                onFocus={() => handleFocus("message")}
+                onBlur={handleBlur}
+                className="w-full resize-none bg-transparent border-b border-black/20 py-2 text-xl text-foreground outline-none transition-colors focus:border-primary-accent"
+              />
+            </div>
+
+            <Magnetic>
+              <button className="hover-target group relative flex h-20 w-full items-center justify-between overflow-hidden rounded-full bg-transparent border border-black/5 border border-black/10 px-10 transition-colors hover:border-primary-accent">
+                <span className="relative z-10 text-xl font-medium text-foreground transition-colors group-hover:text-black">Send Message</span>
+                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-transparent border border-black text-black transition-colors group-hover:bg-black group-hover:text-foreground">
+                  <Send size={20} className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                </div>
+                <div className="absolute left-1/2 top-1/2 z-0 h-[200%] w-[120%] -translate-x-1/2 -translate-y-1/2 scale-y-0 rounded-[50%] bg-primary-accent transition-transform duration-500 ease-out group-hover:scale-y-100" />
+              </button>
+            </Magnetic>
+          </form>
+        </motion.div>
+
+      </div>
+    </section>
+  );
+}
