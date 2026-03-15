@@ -23,7 +23,7 @@ const projects = [
     description: "Fear of Reac Wrote in html we will handle rest",
     color: "#FF5F00",
     image: project2,
-    position: "center top",
+    position: "center center",
   },
   {
     title: "GANY'S Furnitue ",
@@ -32,7 +32,7 @@ const projects = [
     description: "E commerce webpage for u ",
     color: "#9CA3AF",
     image: project3,
-    position: "center top",
+    position: "center center",
   },
 ];
 
@@ -68,16 +68,15 @@ function ProjectCard({ project, index }) {
 
   return (
     <div ref={cardRef} className="group relative flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-16">
-      <div className="relative h-[400px] w-full overflow-hidden rounded-3xl bg-zinc-100 lg:h-[600px] lg:w-2/3 cursor-pointer">
+      <div className="relative h-[400px] w-full overflow-hidden rounded-3xl bg-white/[0.03] border border-black/5 lg:h-[600px] lg:w-2/3 cursor-pointer p-8">
         <motion.div
-          className="absolute inset-0 h-[120%] w-full"
+          className="absolute inset-0 h-full w-full"
           style={{ y }}
         >
           <img
             src={project.image}
             alt={project.title}
-            className="h-full w-full object-cover"
-            style={{ objectPosition: project.position }}
+            className="h-full w-full object-contain"
           />
         </motion.div>
 
